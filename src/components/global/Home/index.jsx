@@ -64,7 +64,6 @@ export default function Home() {
           className="mt-10 flex gap-4 flex-wrap justify-center"
         >
           <button
-            onClick={() => setShowForm(!showForm)}
             className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 transition-all shadow"
           >
             View Pricing <ArrowRight className="w-4 h-4" />
@@ -72,7 +71,7 @@ export default function Home() {
 
           <Link href="/about">
             <button className="border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-xl transition-all shadow-sm">
-              Get Started
+              Try Now
             </button>
           </Link>
         </motion.div>
