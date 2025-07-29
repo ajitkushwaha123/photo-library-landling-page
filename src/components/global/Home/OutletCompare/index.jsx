@@ -8,22 +8,22 @@ const outletComparisons = [
   {
     id: 1,
     before: {
-      image: "/assets/outlet_compare_1.png",
+      image: "/assets/outlet_compare_7.png",
       desc: "Dull and flat images that reduce appeal and conversions.",
     },
     after: {
-      image: "/assets/outlet_compare_1.png",
+      image: "/assets/outlet_compare_6.png",
       desc: "Bright, appetizing shots that instantly catch attention.",
     },
   },
   {
     id: 2,
     before: {
-      image: "/assets/outlet_compare_1.png",
+      image: "/assets/outlet_compare_5.png",
       desc: "Low-quality visuals that fail to attract hungry customers.",
     },
     after: {
-      image: "/assets/outlet_compare_1.png",
+      image: "/assets/outlet_compare_2.png",
       desc: "Professional-grade photos that drive real results.",
     },
   },
