@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kabootar.live
+
+# Sitemaps
+Sitemap: https://kabootar.live/sitemap.xml
