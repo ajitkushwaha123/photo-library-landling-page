@@ -12,17 +12,17 @@ import { motion } from "framer-motion";
 
 const imageSlides = [
   {
-    src: "/assets/compare1.png",
+    src: "/assets/BEFORE1.png",
     alt: "Before Using Our Photos",
     caption: "Before: Unclear, dull images that fail to attract attention.",
   },
   {
-    src: "/assets/compare2.png",
+    src: "/assets/BEFORE2.png",
     alt: "After Using Our Photos",
     caption: "After: Bright, clear, Zomato-optimized images that convert.",
   },
   {
-    src: "/assets/compare3.png",
+    src: "/assets/BEFORE3.png",
     alt: "Boosted Visual Impact",
     caption: "Enhanced presentation that reflects your brand quality.",
   },
@@ -54,9 +54,12 @@ export default function OutletComparisonSection() {
         viewport={{ once: true }}
       >
         <Carousel className="w-full">
-          <CarouselContent>
+          <CarouselContent className="flex">
             {imageSlides.map((slide, index) => (
-              <CarouselItem key={index} className="flex flex-col items-center">
+              <CarouselItem
+                key={index}
+                className="flex flex-col items-center basis-full sm:basis-1/2 lg:basis-1/3 px-2"
+              >
                 <div className="relative w-full overflow-hidden rounded-sm border shadow-md">
                   <img
                     src={slide.src}
