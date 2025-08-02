@@ -1,108 +1,106 @@
 "use client";
 
 import React from "react";
-import { Bug, Mail, Phone, MapPin, Headset } from "lucide-react";
+import { Bug, Mail, MapPin, Headset } from "lucide-react";
 import Template from "@/components/global/template";
 
 const cardData = [
   {
-    title: "Report a Technical Issue",
-    description: "Facing a bug or error on our CRM dashboard?",
+    title: "Report an Image Issue",
+    description: "Wrong tag, missing item, or need image update?",
     icon: <Bug className="w-6 h-6 text-red-500" />,
     content: (
       <>
-        If you've encountered a glitch, integration error, or API failure on the
-        Kabootar.ai CRM platform, please reach out immediately.
+        If you've found an image that doesn't match the food item, has quality
+        issues, or you'd like us to add a missing dish, please reach out.
         <br />
         <br />
-        Include as much detail as possible — your browser, screenshot (if any),
-        what action caused the issue, and time of occurrence.
-        <br />
-        <br />
-        Send it to{" "}
+        You can email a screenshot, dish name, or collection reference to{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:report@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
+          report@foodsnap.in
         </a>{" "}
-        for fastest resolution.
+        and we’ll take care of it.
+        <br />
+        <br />
+        Most reports are resolved within 24 hours.
       </>
     ),
   },
   {
-    title: "Call Our CRM Support Team",
-    description:
-      "For urgent issues or onboarding help, speak directly with us.",
-    icon: <Phone className="w-6 h-6 text-green-500" />,
+    title: "General Support",
+    description: "Need help accessing images or managing your plan?",
+    icon: <Mail className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        For instant help with CRM onboarding, lead sync failures, or WhatsApp
-        number linking, contact us by phone at{" "}
+        For help with billing, download access, or subscription concerns, feel
+        free to contact our support team.
+        <br />
+        <br />
+        Drop an email to{" "}
         <a
-          href="tel:+918178739633"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          +91 8178739633
+          support@foodsnap.in
+        </a>{" "}
+        — we're happy to assist.
+      </>
+    ),
+  },
+  {
+    title: "Business or Media Contact",
+    description: "Want to collaborate, license, or partner with us?",
+    icon: <MapPin className="w-6 h-6 text-green-500" />,
+    content: (
+      <>
+        For media, business inquiries, or bulk licensing of our food imagery,
+        contact us at{" "}
+        <a
+          href="mailto:contact@foodsnap.in"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          contact@foodsnap.in
         </a>
         .
         <br />
         <br />
-        Available Mon–Sat, 10AM–6PM IST.
-      </>
-    ),
-  },
-  {
-    title: "Visit or Mail Our Office",
-    description:
-      "For compliance, billing, or legal issues, contact us offline.",
-    icon: <MapPin className="w-6 h-6 text-green-500" />,
-    content: (
-      <>
-        <strong>Kabootar.ai – Office Address</strong>
-        <br />
-        FIRST FLOOR, NEAR AIR FORCE CAMP
-        <br />
-        RAJOKARI, NEW DELHI – 110038
-        <br />
-        <br />
-        Please schedule a visit in advance. Walk-ins are not allowed without
-        prior approval.
+        Location: New Delhi, India.
       </>
     ),
   },
 ];
 
 const contactData = {
-  title: "Need Urgent Help or Want to Report Something?",
+  title: "Facing an Issue with FoodSnap?",
   description:
-    "We're here to assist with platform issues, billing confusion, API errors, or CRM functionality bugs.",
+    "We’re here to help with image problems, download errors, or content requests. Let us know what went wrong and we’ll fix it fast.",
   content: (
     <div>
       <p className="mb-4">
-        If you’re experiencing issues with Kabootar.ai — such as message
-        delivery failure, CRM data errors, or integration malfunctions — don’t
-        hesitate to contact us.
+        Whether it’s a mislabelled food image, Swiggy/Zomato upload issue, or
+        something missing from your collection — we’re just an email away.
       </p>
       <p>
-        📧 Email:{" "}
+        📧 Report an image:{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:report@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
+          report@foodsnap.in
         </a>
         <br />
-        📞 Phone:{" "}
+        📧 General Support:{" "}
         <a
-          href="tel:+918178739633"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          +91 8178739633
+          support@foodsnap.in
         </a>
         <br />
-        📍 Address: FIRST FLOOR, NEAR AIR FORCE CAMP, RAJOKARI, NEW DELHI –
-        110038
+        📍 Location: New Delhi, India
       </p>
     </div>
   ),
@@ -114,17 +112,17 @@ const page = () => {
       title="Report an Issue"
       heading={
         <div>
-          Report a Bug <br className="hidden sm:block" />
-          or Contact CRM Support
+          Report a Food Image Problem <br className="hidden sm:block" />
+          or Get Help Instantly
         </div>
       }
-      description="Found an issue on the Kabootar.ai platform? Whether it's a WhatsApp API bug, dashboard error, or setup failure — let us know."
-      ctaDescription="We aim to fix bugs quickly and improve your CRM experience. Use the contact methods below to report any issue."
+      description="Found an issue in a food image or can't access your downloads? Let us know. We’re here to resolve your concerns quickly."
+      ctaDescription="Our team actively monitors and improves the image library. If something’s wrong, reporting helps us fix it for everyone."
       ctaLink="/contact"
       ctaButton={
         <span className="flex items-center gap-2">
           <Headset className="w-4 h-4" />
-          Talk to Support
+          Contact Support
         </span>
       }
       infoData={cardData}

@@ -12,15 +12,15 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Kabootar.ai – WhatsApp CRM",
-  description: "Manage WhatsApp conversations and leads with Kabootar.ai",
+  title: "FoodSnap.in – Food Images Library",
+  description:
+    "Download Swiggy & Zomato pre-approved food images instantly. Unlimited access for ₹999/month with FoodSnap.in.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ClerkProvider waitlistUrl="/">
-        {" "}
+      <ClerkProvider>
         <body className={`${poppins.variable} font-poppins antialiased`}>
           <ThemeProvider
             attribute="class"
@@ -37,11 +37,11 @@ export default function RootLayout({ children }) {
           />
           <Script id="google-analytics" strategy="afterInteractive">
             {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5HJD7C1GQ4');
-          `}
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5HJD7C1GQ4');
+            `}
           </Script>
         </body>
       </ClerkProvider>

@@ -6,90 +6,96 @@ import Template from "@/components/global/template";
 
 const cardData = [
   {
-    title: "Digital Nature of Our CRM Services",
+    title: "Digital Nature of Our Food Image Library",
     description:
-      "Our software platform is entirely digital and delivered via the cloud.",
+      "Our platform offers a fully digital collection of food images delivered instantly online.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Our cloud-based CRM software is a digital service that operates on top
-        of the official WhatsApp Cloud API. Once your account is provisioned,
-        setup begins, and services are considered delivered.
+        FoodSnap.in provides a curated digital library of food photographs that
+        are pre-approved for platforms like Swiggy and Zomato. Once you
+        subscribe, access is granted immediately and your downloads can begin.
         <br />
         <br />
-        Kabootar.ai, our WhatsApp CRM automation tool, does not offer physical
-        goods. All services are virtual, API-driven, and activated instantly.
+        As a digital platform, we do not deliver any physical products. All
+        image content is accessible online, copyright-cleared for commercial
+        use, and downloadable with unlimited access during your active
+        subscription period.
       </>
     ),
   },
   {
-    title: "No Return or Refund Policy for CRM Subscriptions",
+    title: "Strict No Refund Policy on Subscriptions",
     description:
-      "SaaS subscriptions are final and non-refundable once activated.",
+      "All purchases are final. We do not offer returns, refunds, or exchanges.",
     icon: <Trash2 className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai offers a business-focused CRM solution powered by WhatsApp
-        Cloud API. Due to the nature of software services, we do not provide
-        returns, refunds, or exchanges once a CRM subscription or WhatsApp API
-        setup is activated.
+        Due to the digital nature of our service, FoodSnap.in strictly does not
+        provide refunds once a subscription is activated. Subscribers gain
+        instant access to our full image collection — making refunds impractical
+        and inapplicable.
         <br />
         <br />
-        Users are encouraged to explore demo access or product overviews before
-        purchasing CRM automation tools on Kabootar.ai.
+        We encourage users to review available sample images and service
+        information before subscribing. All purchases are final and
+        non-refundable.
       </>
     ),
   },
   {
-    title: "Subscription Cancellation & Data Removal",
+    title: "Subscription Cancellation & Access Expiry",
     description:
-      "You may cancel your CRM plan at any time. No future charges apply.",
+      "Cancel anytime. Access ends automatically when your subscription ends.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai allows users to cancel their CRM subscription at any time.
-        You will not be billed for upcoming cycles after cancellation. Data
-        related to CRM leads, API logs, and messaging insights may be deleted
-        permanently.
+        You can cancel your FoodSnap.in subscription at any time from your
+        dashboard. Your access to the food image library will remain active
+        until the end of your billing cycle.
         <br />
         <br />
-        Our platform respects your decision to stop using our WhatsApp-based CRM
-        software, and we ensure data privacy and compliance upon cancellation.
+        After cancellation or expiry, you will no longer have access to
+        downloads, but you are free to use images already downloaded during your
+        subscription period. You can re-subscribe at any time to regain access.
       </>
     ),
   },
 ];
 
 const contactData = {
-  title: "Still Have Questions About CRM Returns or Policies?",
+  title: "Need Help Understanding Our Policy?",
   description:
-    "Our CRM support team can help clarify refund, billing, or cancellation policies.",
+    "Have questions about refunds, subscriptions, or content access?",
   content: (
     <div>
       <p className="mb-4">
-        If you need assistance regarding CRM return policies, WhatsApp API
-        billing, or subscription terms, feel free to email us at{" "}
+        For any questions or clarifications regarding our refund and
+        cancellation policies, you can reach out to us at{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
         >
-          support@kabootar.live
-        </a>
-        . We’re here to support your CRM experience on{" "}
+          support@foodsnap.in
+        </a>{" "}
+        or{" "}
         <a
-          href="https://web.kabootar.live"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:contact@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
         >
-          web.kabootar.live
+          contact@foodsnap.in
         </a>
         .
       </p>
       <p>
-        We understand choosing a WhatsApp-based CRM platform is important for
-        business continuity. Let us assist you in understanding our no-return,
-        no-refund policy for cloud CRM software subscriptions.
+        You can also report image-related issues or removal requests at{" "}
+        <a
+          href="mailto:report@foodsnap.in"
+          className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
+        >
+          report@foodsnap.in
+        </a>
+        . We're based in New Delhi, India and ready to help!
       </p>
     </div>
   ),
@@ -98,15 +104,15 @@ const contactData = {
 const page = () => {
   return (
     <Template
-      title="Return Policy"
+      title="Return & Refund Policy"
       heading={
         <div>
-          Return Policy <br className="hidden sm:block" />
-          for WhatsApp Cloud CRM Subscriptions
+          Refund & Cancellation <br className="hidden sm:block" />
+          Policy for FoodSnap Subscriptions
         </div>
       }
-      description="Understand our return and refund policy for CRM software subscriptions powered by WhatsApp Cloud API. Kabootar.ai is a digital service platform."
-      ctaDescription="Our CRM platform is subscription-based and software-driven. Once activated, services are delivered digitally and are non-refundable. Please read our no-return policy before subscribing."
+      description="Understand our refund and cancellation policy for FoodSnap — your digital food image library subscription."
+      ctaDescription="FoodSnap is a digital-only platform. Once subscribed, you get full access to our pre-approved image collection. No refunds or returns are permitted after subscription."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">

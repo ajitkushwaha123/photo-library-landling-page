@@ -6,55 +6,55 @@ import Template from "@/components/global/template";
 
 const cardData = [
   {
-    title: "No Strict Refund Policy for CRM Software Services",
+    title: "No Refund Policy for Digital Image Downloads",
     description:
-      "Due to the digital nature of our CRM platform, refunds are not guaranteed.",
+      "Due to the nature of downloadable digital food content, refunds are generally not provided.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai is a software-as-a-service (SaaS) platform built on the
-        official WhatsApp Cloud API. Our CRM system is delivered instantly once
-        an account is activated.
+        FoodSnap.in provides instant access to a curated library of
+        Swiggy/Zomato-approved food images upon subscription.
         <br />
         <br />
-        Since our service is digital, subscription-based, and API-connected,
-        Kabootar.ai maintains a strict **no-refund policy** unless required by
-        applicable law or a verified billing error.
+        As our service is digital, subscription-based, and provides immediate
+        download access, FoodSnap.in follows a strict{" "}
+        <strong>no-refund policy</strong> unless required by applicable law or
+        due to a verified billing error.
       </>
     ),
   },
   {
-    title: "User Acknowledgement at Subscription",
+    title: "User Agreement at Time of Subscription",
     description:
-      "All users accept the refund terms during checkout or onboarding.",
+      "Users agree to our refund terms before activating a subscription.",
     icon: <Trash2 className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        By subscribing to Kabootar.ai’s CRM software, users acknowledge that the
-        service becomes non-refundable once activated.
+        By subscribing to FoodSnap.in, users acknowledge that their plan
+        includes unlimited downloads and becomes non-refundable once activated.
         <br />
         <br />
-        We highly recommend exploring our available demo, documentation, or
-        trial features (if applicable) before completing any payment.
+        We strongly encourage users to explore our platform preview or contact
+        support before subscribing if unsure.
       </>
     ),
   },
   {
-    title: "Refunds for Billing Errors or Duplicate Payments",
-    description:
-      "We may review refund requests in specific billing-related cases.",
+    title: "Refunds in Rare Billing Error Cases",
+    description: "Refunds may be considered only in billing-related issues.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai may consider issuing a refund only in the case of:
+        FoodSnap.in may consider refunding only in specific billing-related
+        scenarios such as:
         <ul className="list-disc ml-5 mt-2">
-          <li>Duplicate payment made by the user</li>
-          <li>Verified technical failure during transaction</li>
-          <li>Accidental overcharge due to system error</li>
+          <li>Duplicate payment made by mistake</li>
+          <li>Technical transaction failure</li>
+          <li>Accidental overcharge due to system issue</li>
         </ul>
         <br />
-        If you believe you are eligible for a billing-related refund, please
-        contact our CRM support team with full details.
+        To request a billing-related review, please contact our support team
+        with full transaction details.
       </>
     ),
   },
@@ -63,33 +63,32 @@ const cardData = [
 const contactData = {
   title: "Need Help with a Billing or Refund Concern?",
   description:
-    "Our CRM support team is available to review refund-related queries.",
+    "Our support team can review valid refund queries for FoodSnap.in.",
   content: (
     <div>
       <p className="mb-4">
-        While we operate on a no-refund basis, we understand rare situations
-        related to billing may occur. If you believe you are eligible for a
-        refund or experienced a payment issue, contact us at{" "}
+        Although we operate under a no-refund policy for digital downloads, we
+        understand that certain rare billing situations may arise. If you
+        believe you're eligible for a refund due to a payment issue, reach out
+        to us at{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
         >
-          support@kabootar.live
+          support@foodsnap.in
         </a>
         .
       </p>
       <p>
-        All refund inquiries for our WhatsApp-based CRM software will be
-        reviewed carefully. You can also visit{" "}
+        All refund requests are reviewed carefully. For issues related to image
+        drops or file access, you may also contact{" "}
         <a
-          href="https://web.kabootar.live"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:report@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
         >
-          web.kabootar.live
-        </a>{" "}
-        for more information about our software platform.
+          report@foodsnap.in
+        </a>
+        .
       </p>
     </div>
   ),
@@ -102,11 +101,11 @@ const page = () => {
       heading={
         <div>
           Refund Policy <br className="hidden sm:block" />
-          for WhatsApp CRM Subscriptions
+          for FoodSnap Subscriptions
         </div>
       }
-      description="Learn about the refund policy for CRM software subscriptions provided by Kabootar.ai. Our SaaS platform is powered by WhatsApp Cloud API and does not follow a strict refund model."
-      ctaDescription="Kabootar.ai operates under a no-refund policy for digital CRM subscriptions. Exceptions may apply only for duplicate transactions or verified billing errors. Review our policy below."
+      description="Understand our refund policy for digital food image subscriptions on FoodSnap.in. Due to the instant delivery model, refunds are limited to billing issues only."
+      ctaDescription="FoodSnap.in follows a no-refund policy for digital food image downloads. Exceptions apply only in the case of duplicate payments or technical billing errors."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">

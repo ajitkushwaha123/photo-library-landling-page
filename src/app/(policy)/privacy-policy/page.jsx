@@ -1,4 +1,5 @@
 "use client";
+
 import Template from "@/components/global/template";
 import { Headset } from "lucide-react";
 import React from "react";
@@ -8,69 +9,74 @@ const cardData = [
   {
     title: "Types of Information We Gather",
     description:
-      "We track usage data that informs us about how you interact with our services.",
+      "We track essential data to understand how you interact with our platform.",
     icon: <Rows className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        We collect a variety of personal information from users, including your
-        name, email address, phone number, and business identity. We also gather
-        account-related info such as your username, password, and WhatsApp
-        Business details.
+        We collect basic user information such as your name, email address, and
+        contact preferences when you sign up for FoodSnap.in.
         <br />
         <br />
-        We track how you interact with Kabootar.ai — login times, API activity,
-        message volume, and usage patterns.
+        We also track how you use our platform — including login activity,
+        download frequency, and interaction patterns — to improve our service
+        and detect misuse.
       </>
     ),
   },
   {
     title: "Ways We Utilize Your Data",
     description:
-      "We analyze usage trends to refine our offerings and better meet your needs.",
+      "Your data helps us personalize your experience and keep the platform secure.",
     icon: <Zap className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        We use collected data to personalize your experience, improve messaging
-        flows, and optimize CRM features. It helps us offer technical support,
-        identify abuse, and send product updates.
+        We use your data to deliver relevant image collections, recommend
+        categories, and improve download performance.
         <br />
         <br />
-        Data may also be used to provide you with relevant insights, usage
-        analytics, or new feature alerts.
+        It also helps us provide technical support, issue invoices, track
+        abusive usage patterns, and notify you about platform changes or
+        features.
       </>
     ),
   },
   {
     title: "How We Protect Your Data",
     description:
-      "We implement strict security protocols to safeguard your information.",
+      "We implement robust safeguards to keep your information secure.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        We use encryption, secure APIs, and access control mechanisms to protect
-        sensitive data. Our systems are regularly monitored to detect
-        vulnerabilities and unauthorized access.
+        All user data is protected by secure access layers, encrypted endpoints,
+        and strict internal access control.
         <br />
         <br />
-        All communications with WhatsApp APIs are authenticated and encrypted
-        using secure protocols.
+        We do not share your personal information with third parties unless
+        required by law or for critical service integrations (like payment
+        providers).
       </>
     ),
   },
   {
     title: "Data Retention & Deletion",
     description:
-      "You control your data. We let you manage or delete your stored information.",
+      "You have control over your data — and can delete your account anytime.",
     icon: <Trash2 className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Your data is stored only as long as needed for service functionality or
-        legal compliance. You can request account deletion, which erases all
-        associated data permanently.
+        We retain your information as long as your subscription is active or as
+        needed to comply with legal obligations.
         <br />
         <br />
-        We respect data minimization and retain only what is essential for
-        business continuity and compliance.
+        You can request complete deletion of your account and associated data by
+        contacting us at{" "}
+        <a
+          href="mailto:report@foodsnap.in"
+          className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
+        >
+          report@foodsnap.in
+        </a>
+        .
       </>
     ),
   },
@@ -79,36 +85,41 @@ const cardData = [
 const contactData = {
   title: "Contact Us with Your Questions or Concerns",
   description:
-    "We value your feedback and are here to assist you with any questions or concerns.",
+    "We value your privacy and are here to help with anything related to your data.",
   content: (
     <div>
       <p className="mb-4">
-        At Kabootar.ai, your privacy and trust are our top priorities. If you
-        have any questions, feedback, or concerns regarding our Privacy Policy
-        or how we handle your data on{" "}
+        At FoodSnap.in, your trust is important to us. If you have any questions
+        about our Privacy Policy or how your data is handled, please don’t
+        hesitate to contact us. We're committed to being transparent and
+        respectful of your rights.
+      </p>
+      <p className="mb-2">
+        General queries:{" "}
         <a
-          href="https://web.kabootar.live"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:contact@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
         >
-          web.kabootar.live
+          contact@foodsnap.in
         </a>
-        , feel free to contact us. We're committed to being transparent and
-        responsive to your needs.
+      </p>
+      <p className="mb-2">
+        For support:{" "}
+        <a
+          href="mailto:support@foodsnap.in"
+          className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
+        >
+          support@foodsnap.in
+        </a>
       </p>
       <p>
-        Whether you're looking for clarity on a specific section of our policy,
-        want to better understand your data rights, or have ideas to improve
-        your experience, we’re listening. Reach out to our support team anytime
-        at{" "}
+        Data/report requests:{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:report@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
         >
-          support@kabootar.live
+          report@foodsnap.in
         </a>
-        .
       </p>
     </div>
   ),
@@ -124,11 +135,8 @@ const page = () => {
           Your Rights. Our Responsibility.
         </div>
       }
-      description="Learn how we collect, use, and safeguard your personal information
-          with full transparency and control."
-      ctaDescription="We are committed to protecting your personal data. This policy
-              explains what information we collect, how we use it. By using our
-              services, you agree to this policy."
+      description="Learn how we collect, use, and safeguard your personal information with full transparency and control."
+      ctaDescription="We are committed to protecting your personal data. This policy explains what information we collect and how we use it. By using our services, you agree to this policy."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">

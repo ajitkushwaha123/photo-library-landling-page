@@ -7,20 +7,22 @@ import Template from "@/components/global/template";
 const cardData = [
   {
     title: "Customer Support",
-    description: "Have an issue or need help with our CRM platform?",
+    description:
+      "Need help accessing images or have an issue with your account?",
     icon: <Headset className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Whether you're facing a technical challenge, have questions about your
-        WhatsApp CRM integration, or need guidance, our team is here to help.
+        Whether you're facing trouble downloading images, need help with your
+        subscription, or have a platform-related query, our support team is here
+        for you.
         <br />
         <br />
         Reach out via email at{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
+          support@foodsnap.in
         </a>{" "}
         — we typically respond within 24 hours.
       </>
@@ -28,37 +30,28 @@ const cardData = [
   },
   {
     title: "Phone Support",
-    description: "Prefer speaking to a human? We're available by phone too.",
+    description: "Prefer to talk to someone directly?",
     icon: <Phone className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Call us at{" "}
-        <a
-          href="tel:+918178739633"
-          className="text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          +91 8178739633
-        </a>{" "}
-        during business hours (Mon–Sat, 10AM–6PM IST) for real-time assistance
-        with onboarding, CRM usage, or API support.
+        We currently do not offer phone support. Please reach out via email for
+        all inquiries.
       </>
     ),
   },
   {
-    title: "Office Location",
-    description: "Visit or mail us at our registered address.",
+    title: "Location",
+    description: "We operate from India’s capital city.",
     icon: <MapPin className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        <strong>Kabootar.ai – Office Address</strong>
+        <strong>FoodSnap.in – Headquarters</strong>
         <br />
-        FIRST FLOOR, NEAR AIR FORCE CAMP
-        <br />
-        RAJOKARI, NEW DELHI – 110038
+        New Delhi, India
         <br />
         <br />
-        Please schedule an appointment before visiting. We do not allow walk-ins
-        for security and operational reasons.
+        Please contact us via email before requesting any form of
+        correspondence.
       </>
     ),
   },
@@ -67,32 +60,40 @@ const cardData = [
 const contactData = {
   title: "We’re Here to Help",
   description:
-    "Questions about Kabootar.ai, WhatsApp CRM, or integration support? Contact our team today.",
+    "Questions about your subscription, billing, or downloading images? Get in touch.",
   content: (
     <div>
       <p className="mb-4">
-        Whether you're a new user or an existing client, we value your
-        questions, feedback, and business needs. Let us know how we can support
-        your experience with Kabootar.ai.
+        Whether you're a restaurant owner, marketer, or just exploring
+        high-quality food images, we value your questions and feedback. Let us
+        know how we can support you.
       </p>
       <p>
         Email:{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
+          support@foodsnap.in
         </a>{" "}
         <br />
-        Phone:{" "}
+        General Queries:{" "}
         <a
-          href="tel:+918178739633"
+          href="mailto:contact@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          +91 8178739633
+          contact@foodsnap.in
         </a>{" "}
         <br />
-        Address: FIRST FLOOR, NEAR AIR FORCE CAMP, RAJOKARI, NEW DELHI – 110038
+        Report or Request Images:{" "}
+        <a
+          href="mailto:report@foodsnap.in"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          report@foodsnap.in
+        </a>{" "}
+        <br />
+        Location: New Delhi, India
       </p>
     </div>
   ),
@@ -105,11 +106,11 @@ const page = () => {
       heading={
         <div>
           Get in Touch <br className="hidden sm:block" />
-          with Kabootar.ai Support
+          with FoodSnap.in Support
         </div>
       }
-      description="Need help with our WhatsApp-based CRM platform? Contact Kabootar.ai support for technical, billing, or onboarding assistance."
-      ctaDescription="We’re just an email or call away. Reach out with your questions, and our CRM team will get back to you promptly."
+      description="Need help with your subscription or downloading images? Contact the FoodSnap.in team for support and assistance."
+      ctaDescription="We’re just an email away. Reach out with your questions, and our support team will get back to you promptly."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">

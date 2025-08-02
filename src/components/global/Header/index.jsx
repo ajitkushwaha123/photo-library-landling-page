@@ -10,7 +10,7 @@ const navLinks = [
   { title: "Updates", href: "/updates" },
   { title: "FAQs", href: "/faqs" },
   { title: "Contact Us", href: "/contact" },
-  { title: "Pricing", href: "#pricing" },
+  { title: "Pricing", href: "/pricing" },
 ];
 
 const navMobileLinks = [

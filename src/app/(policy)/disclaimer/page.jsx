@@ -6,102 +6,106 @@ import Template from "@/components/global/template";
 
 const cardData = [
   {
-    title: "Informational Purposes Only",
+    title: "Content for Informational Use Only",
     description:
-      "All content on Kabootar.ai is for informational and operational use.",
+      "All descriptions, examples, and image previews are for general reference.",
     icon: <AlertTriangle className="w-6 h-6 text-yellow-500" />,
     content: (
       <>
-        The information provided on Kabootar.ai, including CRM workflows,
-        tutorials, and guides, is for general informational purposes only.
+        The images and information on FoodSnap.in are intended for general
+        informational and illustrative purposes only. We strive to maintain
+        accuracy in captions, categories, and usage compatibility.
         <br />
         <br />
-        While we strive to keep content up to date, we make no guarantees of
-        accuracy, completeness, or reliability. You use the platform at your own
-        discretion.
+        However, we do not guarantee the completeness, correctness, or
+        availability of every image at all times. Users are advised to validate
+        image relevance before commercial use.
       </>
     ),
   },
   {
     title: "No Guarantee of Business Results",
     description:
-      "Kabootar.ai is a lead management tool, not a guaranteed lead conversion engine.",
+      "We do not guarantee any increase in sales, approvals, or platform acceptance.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai offers tools to manage WhatsApp-based communication,
-        automate lead handling, and streamline CRM workflows.
+        While all images on FoodSnap.in are pre-approved for Swiggy and Zomato
+        listings based on prior use, FoodSnap.in does not guarantee that your
+        individual restaurant listing will be approved, ranked, or favored due
+        to these images.
         <br />
         <br />
-        We do not guarantee business outcomes, lead generation, message delivery
-        rates, or approval of WhatsApp Business accounts.
+        Business results depend on various external factors including platform
+        policies and your specific brand or menu.
       </>
     ),
   },
   {
-    title: "Third-Party Integrations",
+    title: "Third-Party Platform References",
     description:
-      "Kabootar.ai integrates with WhatsApp Cloud API but is not affiliated with Meta.",
+      "We are not affiliated with Swiggy, Zomato, or any food delivery partner.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Our CRM system is built using the official WhatsApp Cloud API provided
-        by Meta Platforms, Inc.
+        FoodSnap.in is an independent platform offering food photography. While
+        we curate images compatible with Swiggy and Zomato listings, we are not
+        affiliated with, endorsed by, or partnered with Swiggy, Zomato, or any
+        delivery aggregator.
         <br />
         <br />
-        However, Kabootar.ai is an independent platform and is not affiliated,
-        endorsed, or certified by WhatsApp or Meta. All third-party trademarks
-        belong to their respective owners.
+        All trademarks belong to their respective owners.
       </>
     ),
   },
   {
     title: "User Responsibility",
     description:
-      "Users are solely responsible for how they use Kabootar.ai’s CRM tools.",
+      "You are responsible for how you use FoodSnap images and services.",
     icon: <AlertTriangle className="w-6 h-6 text-yellow-500" />,
     content: (
       <>
-        It is the user’s responsibility to ensure lawful use of Kabootar.ai's
-        CRM platform. Misuse, spam, or violation of Meta’s WhatsApp terms may
-        result in penalties or API suspension.
+        Users are solely responsible for ensuring that images are used in
+        accordance with restaurant branding guidelines, platform policies, and
+        legal requirements.
         <br />
         <br />
-        We do not accept liability for account blocks, banned phone numbers, or
-        user-side violations.
+        FoodSnap.in is not liable for any listing rejections, copyright
+        violations, or misrepresentation arising from user-side misuse or
+        misinterpretation.
       </>
     ),
   },
 ];
 
 const contactData = {
-  title: "Have Concerns About the Disclaimer?",
+  title: "Have Questions About This Disclaimer?",
   description:
-    "We welcome inquiries or clarifications regarding any disclaimers or policies.",
+    "Our team is happy to clarify any concerns related to usage rights or platform responsibility.",
   content: (
     <div>
       <p className="mb-4">
         If you have any questions or concerns about this disclaimer or how it
-        applies to your usage of Kabootar.ai, feel free to contact us at{" "}
+        applies to your use of FoodSnap.in, feel free to reach out to us at{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
         >
-          support@kabootar.live
+          support@foodsnap.in
+        </a>{" "}
+        or{" "}
+        <a
+          href="mailto:report@foodsnap.in"
+          className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
+        >
+          report@foodsnap.in
         </a>
         .
       </p>
       <p>
-        You may also refer to our full documentation and FAQs at{" "}
-        <a
-          href="https://web.kabootar.live"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
-        >
-          web.kabootar.live
-        </a>{" "}
-        for further understanding of how Kabootar.ai operates.
+        We're based in New Delhi, India and are here to help with image-related
+        questions, commercial licensing, or platform-specific compatibility
+        guidance.
       </p>
     </div>
   ),
@@ -117,8 +121,8 @@ const page = () => {
           and User Responsibility
         </div>
       }
-      description="Understand your responsibilities and our limitations while using Kabootar.ai — a CRM platform powered by WhatsApp Cloud API."
-      ctaDescription="Kabootar.ai is a software platform and does not guarantee results. Please read this disclaimer carefully before using our CRM features."
+      description="Understand the scope, limitations, and responsibilities of using digital content provided by FoodSnap.in."
+      ctaDescription="FoodSnap.in provides digital images to support your food listing goals. However, platform acceptance and results are not guaranteed. Read this disclaimer carefully before use."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">

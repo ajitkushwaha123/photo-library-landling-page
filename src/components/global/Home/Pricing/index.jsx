@@ -93,11 +93,15 @@ const plans = {
   ],
 };
 
+
 export default function PricingSection() {
   const [billing, setBilling] = useState("monthly");
 
   return (
-    <section id="pricing" className="px-4 py-12 text-white text-center">
+    <section
+      id="pricing"
+      className="px-4 py-12 text-center"
+    >
       <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
         Choose Your Perfect Plan
       </h2>
@@ -107,15 +111,15 @@ export default function PricingSection() {
       </p>
 
       <div className="flex justify-center mb-12">
-        <div className="inline-flex bg-[#0a092d] rounded-full p-1">
+        <div className="inline-flex bg-gray-200 dark:bg-[#0a092d] rounded-full p-1">
           {["monthly", "yearly"].map((type) => (
             <motion.button
               key={type}
               onClick={() => setBilling(type)}
               className={`px-6 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
                 billing === type
-                  ? "bg-white text-black shadow"
-                  : "text-white hover:bg-[#1a1b38]"
+                  ? "bg-black text-white dark:bg-white dark:text-black shadow"
+                  : "text-gray-700 hover:bg-gray-300 dark:text-white dark:hover:bg-[#1a1b38]"
               }`}
               whileTap={{ scale: 0.95 }}
             >
@@ -138,23 +142,27 @@ export default function PricingSection() {
             whileHover={plan.highlight ? { scale: 1.03 } : { y: -4 }}
             className={`relative rounded-2xl border transition-all duration-300 p-8 text-left ${
               plan.highlight
-                ? "bg-gradient-to-b from-[#1d1b3d] to-[#121026] border-[#7c68ff] shadow-2xl"
-                : "bg-[#0a092d] border-neutral-700"
-            } rounded-2xl border border-neutral-200 dark:border-neutral-700 p-4 md:p-10 backdrop-blur-lg shadow-lg dark:shadow-black/20 bg-white/60 dark:bg-[#10101a]/70 transition-colors`}
+                ? "bg-gradient-to-b from-purple-100 to-white dark:from-[#1d1b3d] dark:to-[#121026] border-purple-400 dark:border-[#7c68ff] shadow-xl"
+                : "bg-white border-gray-200 dark:bg-[#0a092d] dark:border-neutral-700"
+            } backdrop-blur-lg shadow-md dark:shadow-black/20 transition-colors`}
           >
             {plan.highlight && (
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#7c68ff] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg z-10">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md z-10">
                 Most Popular
               </span>
             )}
 
-            <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
-            <p className="text-3xl font-bold mb-6">{plan.price}</p>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              {plan.name}
+            </h3>
+            <p className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+              {plan.price}
+            </p>
 
-            <ul className="space-y-3 text-sm text-neutral-300 mb-6">
+            <ul className="space-y-3 text-sm text-gray-600 dark:text-neutral-300 mb-6">
               {plan.features.map((feature, i) => (
                 <li key={i} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 dark:text-green-400" />
                   {feature}
                 </li>
               ))}
@@ -163,8 +171,8 @@ export default function PricingSection() {
             <button
               className={`w-full py-2 rounded-lg font-medium flex items-center justify-center gap-2 transition-all ${
                 plan.highlight
-                  ? "bg-white text-black hover:bg-gray-200"
-                  : "bg-[#ffffff10] text-white hover:bg-[#ffffff20]"
+                  ? "bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                  : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-[#ffffff10] dark:text-white dark:hover:bg-[#ffffff20]"
               }`}
             >
               {plan.button} <ArrowRight className="w-4 h-4" />

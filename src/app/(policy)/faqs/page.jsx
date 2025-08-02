@@ -6,144 +6,116 @@ import Template from "@/components/global/template";
 
 const cardData = [
   {
-    title: "What is Kabootar.ai?",
-    description:
-      "Kabootar.ai is a WhatsApp-first CRM software for managing customer conversations and leads.",
+    title: "What is FoodSnap.in?",
+    description: "FoodSnap.in is a curated image library for food businesses.",
     icon: <Rows className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai is a cloud-based CRM platform that integrates directly with
-        the official WhatsApp Cloud API. It allows you to automate sales
-        communication, track leads, and manage customer engagement all in one
-        place — without switching tabs.
+        FoodSnap.in is an online subscription platform where you can download
+        high-quality food images that are pre-approved by Swiggy and Zomato.
+        Perfect for restaurant menus, delivery platforms, and promotional use.
       </>
     ),
   },
   {
-    title: "How do I get started with the CRM?",
+    title: "How do I get started with FoodSnap?",
     description:
-      "You need a WhatsApp Business Account and approval to use the WhatsApp Cloud API.",
+      "Just subscribe and start downloading instantly — no approval needed.",
     icon: <Zap className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        To start using Kabootar.ai CRM, you’ll need a verified WhatsApp Business
-        Account, a Meta Developer App, and Cloud API access. Once these are
-        active, you can link your number to Kabootar.ai and begin using the
-        platform for lead automation.
+        Visit <strong>www.foodsnap.in</strong>, subscribe to our monthly plan
+        for ₹999, and start exploring and downloading unlimited food images
+        instantly. No waiting, no approvals — all images are ready to use.
       </>
     ),
   },
   {
-    title: "Is Kabootar.ai approved by WhatsApp?",
+    title: "Are images approved by Swiggy and Zomato?",
     description:
-      "Kabootar.ai uses the official WhatsApp Cloud API provided by Meta.",
+      "Yes — all images meet marketplace standards for food listings.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Yes. Kabootar.ai operates on top of Meta’s official WhatsApp Cloud API.
-        However, we do not control WhatsApp's approval or policy enforcement.
-        Users must adhere to WhatsApp's Business Policy and Messaging Rules.
+        Absolutely. All images on FoodSnap.in are curated and pre-approved for
+        use on Swiggy and Zomato. You can use them for menu listings, banners,
+        and promotions without worrying about platform rejection.
       </>
     ),
   },
   {
-    title: "Can I try the platform before purchasing?",
-    description: "We offer demo access or guided onboarding on request.",
+    title: "Can I request a specific dish image?",
+    description: "Yes, you can submit a request and we'll add it to the queue.",
     icon: <MessageCircle className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Yes. If you're unsure about committing, reach out to us at{" "}
+        Missing a dish? No problem. Just send a request to{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:report@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
-        </a>{" "}
-        to request demo access or schedule a walkthrough with our onboarding
-        team.
-      </>
-    ),
-  },
-  {
-    title: "What pricing plans does Kabootar.ai offer?",
-    description:
-      "Flexible pricing based on usage, business size, and WhatsApp message volume.",
-    icon: <Rows className="w-6 h-6 text-green-500" />,
-    content: (
-      <>
-        Kabootar.ai offers monthly subscription plans based on the number of
-        users, automation features, and API volume (such as message templates or
-        conversations). For detailed pricing, please contact{" "}
-        <a
-          href="mailto:support@kabootar.live"
-          className="text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          support@kabootar.live
+          report@foodsnap.in
         </a>
-        .
+        . We aim to upload requested dishes within 48–72 hours.
       </>
     ),
   },
   {
-    title: "Is my data secure on Kabootar.ai?",
-    description:
-      "Yes, we use secure hosting and encrypted communication to protect your data.",
-    icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
-    content: (
-      <>
-        We use industry-standard encryption, HTTPS protocols, and cloud-based
-        secure storage to keep your CRM and messaging data safe. Your WhatsApp
-        API tokens and customer data are never shared or sold.
-      </>
-    ),
-  },
-  {
-    title: "Does Kabootar.ai support team collaboration?",
-    description:
-      "Yes, your team can manage leads and messages collaboratively.",
-    icon: <MessageCircle className="w-6 h-6 text-green-500" />,
-    content: (
-      <>
-        Kabootar.ai allows you to invite team members to your workspace so
-        multiple agents can manage leads, handle replies, and track sales
-        pipelines — all in one shared dashboard.
-      </>
-    ),
-  },
-  {
-    title: "Can I integrate Kabootar.ai with my website or CRM?",
-    description: "Custom integrations are available through APIs and webhooks.",
+    title: "What is the pricing for FoodSnap?",
+    description: "Flat ₹999/month for unlimited downloads.",
     icon: <Zap className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Yes! Kabootar.ai supports third-party integrations via REST APIs,
-        Zapier, and Webhooks. You can connect it with your existing website
-        forms, CRMs, or marketing tools for seamless lead syncing.
+        We offer a simple subscription plan: ₹999/month for unlimited food image
+        downloads. No hidden fees, no download caps. Cancel anytime.
       </>
     ),
   },
   {
-    title: "What happens if I exceed my messaging limits?",
-    description:
-      "You’ll be notified before reaching your WhatsApp Cloud API quota.",
-    icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
-    content: (
-      <>
-        Kabootar.ai monitors your WhatsApp messaging volume. If you’re nearing
-        your daily conversation limit or template quota, we’ll alert you and
-        suggest an upgrade plan or cooldown measures.
-      </>
-    ),
-  },
-  {
-    title: "Is there a refund or cancellation option?",
-    description: "We follow a strict no-refund policy after CRM activation.",
+    title: "Can I cancel anytime?",
+    description: "Yes, you can cancel your subscription whenever you like.",
     icon: <Rows className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai offers digital services, and once your CRM account is
-        activated via WhatsApp Cloud API, refunds are not provided. You may
-        cancel your subscription anytime to avoid future charges.{" "}
+        You’re free to cancel your subscription at any time from your account
+        dashboard. Your access will continue until the end of your billing
+        cycle.
+      </>
+    ),
+  },
+  {
+    title: "What file formats do you provide?",
+    description: "All images are high-res JPEGs suitable for web & app use.",
+    icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
+    content: (
+      <>
+        All images are provided in high-resolution JPEG format, optimized for
+        both web and mobile platforms. Perfect for listings, menus, and
+        marketing.
+      </>
+    ),
+  },
+  {
+    title: "Can I use these images for ads or banners?",
+    description: "Yes, commercial use is allowed for all subscribers.",
+    icon: <Zap className="w-6 h-6 text-green-500" />,
+    content: (
+      <>
+        Yes! As a subscriber, you can use the images in ads, marketing
+        creatives, banners, menus, social media posts, and more — as long as
+        you're an active member.
+      </>
+    ),
+  },
+  {
+    title: "Do you offer refunds?",
+    description: "We currently do not offer refunds after image access.",
+    icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
+    content: (
+      <>
+        Since this is a digital product with instant access, we do not offer
+        refunds once your subscription is active. You can cancel to stop future
+        billing.{" "}
         <a
           href="/refund-policy"
           className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -154,37 +126,54 @@ const cardData = [
       </>
     ),
   },
+  {
+    title: "What if I need support or have issues?",
+    description: "Our team is available via email for any assistance.",
+    icon: <MessageCircle className="w-6 h-6 text-green-500" />,
+    content: (
+      <>
+        If you face any issues with downloads, billing, or usage, feel free to
+        contact us at{" "}
+        <a
+          href="mailto:support@foodsnap.in"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          support@foodsnap.in
+        </a>
+        . We usually reply within 24 hours.
+      </>
+    ),
+  },
 ];
 
 const contactData = {
-  title: "Still Have Questions About WhatsApp CRM?",
+  title: "Still Have Questions?",
   description:
-    "Our team is ready to guide you through every step — from API setup to CRM onboarding.",
+    "We’re happy to help you make the most of FoodSnap. Reach out anytime.",
   content: (
     <div>
       <p className="mb-4">
-        Kabootar.ai is designed to simplify CRM workflows for growing teams and
-        businesses using WhatsApp Cloud API. If you couldn’t find your question
-        here, feel free to reach us anytime.
+        Whether you need a custom dish image, account help, or advice on using
+        FoodSnap images effectively — we’re here for you.
       </p>
       <p>
         Email:{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
-        </a>{" "}
+          support@foodsnap.in
+        </a>
         <br />
-        Phone:{" "}
+        Requests:{" "}
         <a
-          href="tel:+918178739633"
+          href="mailto:report@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          +91 8178739633
-        </a>{" "}
+          report@foodsnap.in
+        </a>
         <br />
-        Address: FIRST FLOOR, NEAR AIR FORCE CAMP, RAJOKARI, NEW DELHI – 110038
+        Location: New Delhi, India
       </p>
     </div>
   ),
@@ -197,11 +186,11 @@ const page = () => {
       heading={
         <div>
           FAQs About <br className="hidden sm:block" />
-          Kabootar.ai CRM
+          FoodSnap.in
         </div>
       }
-      description="Find answers to common questions about using our WhatsApp CRM platform — from onboarding and billing to technical support."
-      ctaDescription="If your question isn’t listed, feel free to reach out. We’re here to help you succeed with WhatsApp-powered CRM automation."
+      description="Find answers to common questions about using our food image library — from subscriptions to usage rights."
+      ctaDescription="Can’t find what you're looking for? Reach out and we’ll help you right away."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">

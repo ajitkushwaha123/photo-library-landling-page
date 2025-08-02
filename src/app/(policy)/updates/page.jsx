@@ -6,74 +6,75 @@ import Template from "@/components/global/template";
 
 const updates = [
   {
-    title: "June 30, 2025 – Lead Source Tagging Launched",
-    description:
-      "You can now tag and filter leads by custom sources like 'Website', 'Instagram', 'Referral', etc.",
+    title: "August 4, 2025 – FoodSnap Launched 🎉",
+    description: "India’s first pre-approved food image library is live.",
     icon: <Zap className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        We’ve added a powerful lead-source tagging feature to help you track
-        where your WhatsApp leads are coming from. This improves campaign
-        attribution and helps you optimize marketing performance.
+        FoodSnap.in is officially live! Access thousands of high-quality,
+        Swiggy/Zomato-approved food images for just ₹999/month. Perfect for
+        restaurants, cloud kitchens, and menu creators who want fast, reliable,
+        and beautiful visuals.
       </>
     ),
   },
   {
-    title: "June 22, 2025 – CRM Mobile View Revamp",
-    description: "A cleaner, faster experience for mobile users.",
-    icon: <Rows className="w-6 h-6 text-green-500" />,
-    content: (
-      <>
-        We’ve improved the mobile UI of Kabootar.ai to ensure smooth navigation,
-        faster lead access, and simplified reply tools — making CRM management
-        easier on the go.
-      </>
-    ),
-  },
-  {
-    title: "June 10, 2025 – Broadcast Scheduling Introduced",
-    description: "Plan WhatsApp messages in advance and send them later.",
+    title: "August 4, 2025 – Image Request Feature",
+    description: "Can’t find a dish? Request it directly from the dashboard.",
     icon: <MessageCircle className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Our new Broadcast Scheduler lets you pre-schedule WhatsApp template
-        messages to be sent at a future date and time. Great for promotions,
-        events, or follow-ups.
+        Users can now submit requests for missing dishes. Our team will
+        prioritize capturing and uploading the requested food image within 48–72
+        hours. This ensures you always get what you need, fast.
       </>
     ),
   },
   {
-    title: "May 28, 2025 – Integration with Google Sheets",
-    description: "Sync your lead data automatically to Google Sheets.",
+    title: "Coming Soon – AI-Based Food Tagging",
+    description: "Smarter search using dish names, cuisines, and ingredients.",
     icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai now supports one-click sync with Google Sheets. You can
-        export leads and messages to Sheets automatically for external
-        processing or reporting.
+        We’re working on an AI-powered tagging system that will allow you to
+        search food images by cuisine (e.g. North Indian, Italian), dish type
+        (e.g. Starter, Dessert), and even core ingredients (e.g. Paneer,
+        Chicken). Stay tuned!
+      </>
+    ),
+  },
+  {
+    title: "Coming Soon – Mobile Experience Optimization",
+    description: "A seamless image browsing and download experience on mobile.",
+    icon: <Rows className="w-6 h-6 text-green-500" />,
+    content: (
+      <>
+        We're improving the mobile interface to make food image browsing,
+        previewing, and downloading smoother on the go. Get your visuals
+        wherever you are, with zero friction.
       </>
     ),
   },
 ];
 
 const contactData = {
-  title: "Want To Request a Feature?",
+  title: "Want To Request a Dish Image?",
   description:
-    "Let us know what you’d like to see in the next Kabootar.ai release.",
+    "Let us know if you can't find a particular food item. We'll prioritize it in the next batch.",
   content: (
     <div>
       <p className="mb-4">
-        These updates reflect our ongoing effort to simplify lead and customer
-        management on WhatsApp. We love building based on your feedback — feel
-        free to reach out.
+        These updates reflect our mission to make professional food visuals
+        accessible, affordable, and Swiggy/Zomato-ready. We love building based
+        on your needs — don’t hesitate to get in touch.
       </p>
       <p>
         Email:{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:report@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
+          report@foodsnap.in
         </a>
       </p>
     </div>
@@ -86,16 +87,16 @@ const page = () => {
       title="Product Updates"
       heading={
         <div>
-          Kabootar.ai – <br className="hidden sm:block" /> Product Changelog
+          FoodSnap.in – <br className="hidden sm:block" /> Product Changelog
         </div>
       }
-      description="Stay updated with the latest improvements to our WhatsApp CRM platform. All updates listed by most recent first."
-      ctaDescription="Check back often to discover new features and improvements we’re rolling out to help your business grow."
+      description="See the latest updates to our food image library. All changes are aimed at helping you find, request, and use Swiggy/Zomato-approved images more easily."
+      ctaDescription="Check back often for new features and fresh food image collections."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">
           <Zap className="w-4 h-4" />
-          Request a Feature
+          Request an Image
         </span>
       }
       infoData={updates}
