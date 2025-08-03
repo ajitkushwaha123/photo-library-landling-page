@@ -30,16 +30,16 @@ export default function RootLayout({ children }) {
         </ThemeProvider>
 
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-SG3Q8RCE7V"
+          src="https://www.googletagmanager.com/gtag/js?id=G-DDZXQ7G4VW"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-              window.dataLayer = window.dataLayer || [];
+             window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-SG3Q8RCE7V');
+  gtag('config', 'G-DDZXQ7G4VW');
             `}
         </Script>
       </body>
