@@ -8,69 +8,66 @@ const cardData = [
   {
     title: "Who We Are",
     description:
-      "Kabootar.ai is a forward-thinking CRM startup focused on WhatsApp-led communication.",
+      "FoodSnap.in is a curated library of high-quality food images built for restaurants, cloud kitchens, and creators.",
     icon: <Users className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Kabootar.ai was founded with a simple vision — to enable businesses to
-        manage their customer conversations, leads, and CRM workflows **entirely
-        via WhatsApp**. Our platform is built on top of the official WhatsApp
-        Cloud API and designed to provide a seamless, fast, and collaborative
-        experience.
+        At FoodSnap, we make it effortless to find beautiful, ready-to-use food
+        photos — all optimized and approved for platforms like{" "}
+        <strong>Zomato</strong> and <strong>Swiggy</strong>.
         <br />
         <br />
-        We believe that conversations drive conversions — and Kabootar.ai is
-        here to streamline every step of that journey.
+        Whether you're launching a new dish or updating your menu, FoodSnap
+        gives you instant access to visuals that convert. No expensive photo
+        shoots. No design hassle. Just <strong>search</strong>,{" "}
+        <strong>download</strong>, and <strong>upload</strong>.
       </>
     ),
   },
   {
     title: "Our Mission",
     description:
-      "Empowering businesses to grow through fast, direct, and human WhatsApp engagement.",
+      "Helping food brands look great and grow faster — one image at a time.",
     icon: <Target className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        Our mission is to create the simplest, fastest, and most reliable CRM
-        experience for teams who live and breathe on WhatsApp. Whether you're
-        closing sales, handling support, or nurturing relationships, Kabootar.ai
-        is designed to meet you where your customers already are.
+        Our mission is simple: make it incredibly easy for food businesses to
+        find stunning visuals that drive appetite and attention.
+        <br />
+        <br />
+        We believe the right photo can make or break a first impression — so we
+        focus on quality, variety, and speed.
       </>
     ),
   },
   {
     title: "Meet Our Founder",
     description:
-      "Led by a passionate builder solving for scale, speed, and simplicity.",
+      "Built by a founder passionate about food, tech, and scalability.",
     icon: <Rocket className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        <strong>Ajit Kushwaha</strong>, the founder of Kabootar.ai, is a final
-        year ECE student at NSUT (Netaji Subhas University of Technology),
-        Delhi. With a strong background in product building, software
-        development, and system design, Ajit created Kabootar.ai to solve the
-        messy, multi-tabbed chaos of lead management.
+        <strong>Ajit Kushwaha</strong> is a product builder and software
+        engineer with a mission to simplify how food businesses grow online.
         <br />
         <br />
-        His vision is to make CRM so fast and intuitive that even non-tech teams
-        can run it without training.
+        With deep experience in system design and an eye for clean UX, he
+        created FoodSnap to eliminate the friction of content creation for
+        restaurants and F&B brands.
       </>
     ),
   },
   {
     title: "Our Values",
-    description: "Customer-first. Privacy-focused. Builder-driven.",
+    description: "Image-first. Time-saving. Built for growth.",
     icon: <HeartHandshake className="w-6 h-6 text-green-500" />,
     content: (
       <>
-        At Kabootar.ai, we value simplicity, trust, and transparency. We strive
-        to:
+        At FoodSnap, we believe in:
         <ul className="list-disc ml-5 mt-2">
-          <li>Build what customers love, not just what looks good on slides</li>
-          <li>Protect user data with the highest security standards</li>
-          <li>
-            Move fast and fix things — because speed is the ultimate weapon
-          </li>
+          <li>Speed over complexity — launch faster with visuals that work</li>
+          <li>Visual storytelling — every dish deserves to shine</li>
+          <li>Builder-driven innovation — we ship fast, listen faster</li>
         </ul>
       </>
     ),
@@ -78,22 +75,22 @@ const cardData = [
 ];
 
 const contactData = {
-  title: "How to Reach Us",
+  title: "Get in Touch",
   description:
-    "We're always happy to talk — whether you're curious, confused, or excited to try.",
+    "Want to collaborate, have a suggestion, or need custom images? Let’s connect.",
   content: (
     <div>
       <p className="mb-4">
-        If you'd like to get in touch with the Kabootar.ai team — whether for
-        partnerships, support, or feedback — feel free to drop us a line.
+        We’re here to help you look better online. Whether you're a restaurant
+        chain or an individual creator, drop us a line.
       </p>
       <p>
         Email:{" "}
         <a
-          href="mailto:support@kabootar.live"
+          href="mailto:support@foodsnap.in"
           className="text-blue-600 dark:text-blue-400 hover:underline"
         >
-          support@kabootar.live
+          support@foodsnap.in
         </a>
         <br />
         Phone:{" "}
@@ -113,15 +110,15 @@ const contactData = {
 const page = () => {
   return (
     <Template
-      title="About Kabootar.ai"
+      title="About FoodSnap.in"
       heading={
         <div>
           About Us <br className="hidden sm:block" />
-          Who We Are, What We Build
+          The Photo Library for Food Businesses
         </div>
       }
-      description="Learn more about Kabootar.ai — our mission, our people, and the purpose behind building a CRM designed for WhatsApp."
-      ctaDescription="We're building in public. Stay connected as we shape the future of WhatsApp CRM."
+      description="Learn how FoodSnap is helping restaurants and creators find stunning, platform-ready food images — without the hassle."
+      ctaDescription="We're growing fast. Stay in the loop with our latest drops, features, and collaborations."
       ctaLink="/updates"
       ctaButton={
         <span className="flex items-center gap-2">
