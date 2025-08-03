@@ -3,7 +3,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import AppShell from "@/components/global/AppShell";
 import Script from "next/script";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,31 +19,29 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ClerkProvider>
-        <body className={`${poppins.variable} font-poppins antialiased`}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <AppShell>{children}</AppShell>
-          </ThemeProvider>
+      <body className={`${poppins.variable} font-poppins antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AppShell>{children}</AppShell>
+        </ThemeProvider>
 
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-5HJD7C1GQ4"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5HJD7C1GQ4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-5HJD7C1GQ4');
             `}
-          </Script>
-        </body>
-      </ClerkProvider>
+        </Script>
+      </body>
     </html>
   );
 }
