@@ -63,14 +63,14 @@ export default function Header() {
         <div className="flex items-center gap-3 md:gap-4">
           <ModeToggle />
           <motion.a
-            href="https://www.instagram.com/kabootar.ai/"
+            href="https://app.foodsnap.in"
             target="_blank"
             className="hidden md:inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-md text-sm font-semibold shadow-md hover:shadow-xl transition-all"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Follow Us
+            Get Started
           </motion.a>
 
           <button
