@@ -101,14 +101,16 @@ export default function Header() {
                 {link.title}
               </a>
             ))}
-            <a
-              href="https://www.instagram.com/kabootar.ai/"
+            <motion.a
+              href="https://app.foodsnap.in"
               target="_blank"
-              onClick={() => setIsOpen(false)}
-              className="block w-full text-center mt-2 text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-sm font-semibold transition"
+              className="hidden md:inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-md text-sm font-semibold shadow-md hover:shadow-xl transition-all"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
             >
-              Follow Us
-            </a>
+              Get Started
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
