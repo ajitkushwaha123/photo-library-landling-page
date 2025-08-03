@@ -98,10 +98,7 @@ export default function PricingSection() {
   const [billing, setBilling] = useState("monthly");
 
   return (
-    <section
-      id="pricing"
-      className="px-4 py-12 text-center"
-    >
+    <section id="pricing" className="px-4 py-12 text-center">
       <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
         Choose Your Perfect Plan
       </h2>
