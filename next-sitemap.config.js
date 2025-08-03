@@ -1,5 +1,5 @@
 export default {
-  siteUrl: "https://kabootar.live", 
+  siteUrl: "https://foodsnap.in", 
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "daily",

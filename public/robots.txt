@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://kabootar.live
+Host: https://foodsnap.in
 
 # Sitemaps
-Sitemap: https://kabootar.live/sitemap.xml
+Sitemap: https://foodsnap.in/sitemap.xml
