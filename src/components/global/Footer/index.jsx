@@ -54,6 +54,13 @@ export default function Footer() {
           >
             Disclaimer
           </Link>
+
+          <Link
+            href="/shipping"
+            className="hover:text-black dark:hover:text-white transition-colors"
+          >
+            Shipping Policy
+          </Link>
         </div>
       </div>
     </motion.footer>
