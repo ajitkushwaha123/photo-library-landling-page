@@ -14,7 +14,7 @@ const plans = {
     },
     {
       name: "Premium",
-      price: "₹899/mo",
+      price: "₹999/mo",
       features: [
         "Full photo library access",
         "Zomato-compliant photos",
@@ -28,71 +28,70 @@ const plans = {
       button: "Go Premium",
       highlight: true,
     },
-    {
-      name: "Pro",
-      price: "₹1,898/mo",
-      features: [
-        "Everything in Premium",
-        "Swiggy onboarding & menu setup",
-        "Zomato to Swiggy menu transfer",
-        "Zomato to Zomato menu copy (across outlets)",
-        "Zomato account must be setup",
-        "Bulk download support",
-        "Live sync consultation (on request)",
-        "Dedicated onboarding support",
-        "Priority support",
-        "+₹999 Per extra outlet setup",
-      ],
-      button: "Upgrade to Pro",
-      highlight: true,
-    },
+    // {
+    //   name: "Pro",
+    //   price: "₹1,898/mo",
+    //   features: [
+    //     "Everything in Premium",
+    //     "Swiggy onboarding & menu setup",
+    //     "Zomato to Swiggy menu transfer",
+    //     "Zomato to Zomato menu copy (across outlets)",
+    //     "Zomato account must be setup",
+    //     "Bulk download support",
+    //     "Live sync consultation (on request)",
+    //     "Dedicated onboarding support",
+    //     "Priority support",
+    //     "+₹999 Per extra outlet setup",
+    //   ],
+    //   button: "Upgrade to Pro",
+    //   highlight: true,
+    // },
   ],
-  yearly: [
-    {
-      name: "Basic",
-      price: "Free",
-      features: ["View sample food photos", "Limited access"],
-      button: "Get Started",
-    },
-    {
-      name: "Premium",
-      price: "₹4,999/yr",
-      features: [
-        "Full photo library access",
-        "Zomato-compliant photos",
-        "Unlimited downloads",
-        "Priority photo request handling",
-        "Exclusive new photo collections every month",
-        "Commercial usage rights",
-        "Early access to new features",
-        "Fast-track support with a dedicated chat line",
-        "Access to seasonal & trending food photo packs",
-        "High-quality images",
-      ],
-      button: "Go Premium",
-      highlight: true,
-    },
-    {
-      name: "Pro",
-      price: "₹5,999/yr",
-      features: [
-        "Everything in Premium",
-        "Swiggy onboarding & menu setup",
-        "Zomato to Swiggy menu transfer",
-        "Zomato to Zomato menu copy (across outlets)",
-        "Zomato account must be setup",
-        "Bulk download support",
-        "Live sync consultation (on request)",
-        "Dedicated onboarding support",
-        "Priority support",
-        "+₹999 Per extra outlet setup",
-      ],
-      button: "Upgrade to Pro",
-      highlight: true,
-    },
-  ],
+  // yearly: [
+  //   {
+  //     name: "Basic",
+  //     price: "Free",
+  //     features: ["View sample food photos", "Limited access"],
+  //     button: "Get Started",
+  //   },
+  //   {
+  //     name: "Premium",
+  //     price: "₹4,999/yr",
+  //     features: [
+  //       "Full photo library access",
+  //       "Zomato-compliant photos",
+  //       "Unlimited downloads",
+  //       "Priority photo request handling",
+  //       "Exclusive new photo collections every month",
+  //       "Commercial usage rights",
+  //       "Early access to new features",
+  //       "Fast-track support with a dedicated chat line",
+  //       "Access to seasonal & trending food photo packs",
+  //       "High-quality images",
+  //     ],
+  //     button: "Go Premium",
+  //     highlight: true,
+  //   },
+  //   {
+  //     name: "Pro",
+  //     price: "₹5,999/yr",
+  //     features: [
+  //       "Everything in Premium",
+  //       "Swiggy onboarding & menu setup",
+  //       "Zomato to Swiggy menu transfer",
+  //       "Zomato to Zomato menu copy (across outlets)",
+  //       "Zomato account must be setup",
+  //       "Bulk download support",
+  //       "Live sync consultation (on request)",
+  //       "Dedicated onboarding support",
+  //       "Priority support",
+  //       "+₹999 Per extra outlet setup",
+  //     ],
+  //     button: "Upgrade to Pro",
+  //     highlight: true,
+  //   },
+  // ],
 };
-
 
 export default function PricingSection() {
   const [billing, setBilling] = useState("monthly");
@@ -107,7 +106,7 @@ export default function PricingSection() {
         from cloud kitchens to fine dining.
       </p>
 
-      <div className="flex justify-center mb-12">
+      {/* <div className="flex justify-center mb-12">
         <div className="inline-flex bg-gray-200 dark:bg-[#0a092d] rounded-full p-1">
           {["monthly", "yearly"].map((type) => (
             <motion.button
@@ -124,7 +123,7 @@ export default function PricingSection() {
             </motion.button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <motion.div
         key={billing}
@@ -165,7 +164,8 @@ export default function PricingSection() {
               ))}
             </ul>
 
-            <button
+            <a
+              href="https://app.foodsnap.in/pricing"
               className={`w-full py-2 rounded-lg font-medium flex items-center justify-center gap-2 transition-all ${
                 plan.highlight
                   ? "bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
@@ -173,7 +173,7 @@ export default function PricingSection() {
               }`}
             >
               {plan.button} <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </motion.div>
         ))}
       </motion.div>
