@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import AppShell from "@/components/global/AppShell";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,6 +29,8 @@ export default function RootLayout({ children }) {
         >
           <AppShell>{children}</AppShell>
         </ThemeProvider>
+
+        <Analytics />
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DDZXQ7G4VW"
