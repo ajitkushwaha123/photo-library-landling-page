@@ -21,29 +21,29 @@ const Template = ({
   contactData,
   GradText = true,
 }) => {
-  const pageUrl = `https://kabootar.live${ctaLink || ""}`;
+  const pageUrl = `https://foodsnap.in${ctaLink || ""}`;
 
   return (
     <>
       <Head>
-        <title>{heading ? `${heading} | Kabootar.ai` : "Kabootar.ai"}</title>
+        <title>{heading ? `${heading} | FoodSnap` : "FoodSnap"}</title>
         <meta
           name="description"
           content={
             description ||
-            "Kabootar.ai - Powerful WhatsApp CRM for modern businesses."
+            "FoodSnap - Smart restaurant menu processing and automation."
           }
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
 
-        <meta property="og:title" content={heading || "Kabootar.ai"} />
+        <meta property="og:title" content={heading || "FoodSnap"} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://kabootar.live/og-image.png"
+          content="https://app.foodsnap.in/logo.png"
         />
 
         <script
@@ -52,7 +52,7 @@ const Template = ({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: typeof heading === "string" ? heading : "Kabootar.ai",
+              name: typeof heading === "string" ? heading : "FoodSnap",
               url: pageUrl,
               description: typeof description === "string" ? description : "",
               inLanguage: "en",
@@ -70,7 +70,7 @@ const Template = ({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-4xl md:text-5xl font-extrabold leading-tight mt-4 bg-gradient-to-r from-violet-900 dark:from-violet-500 via-purple-600 dark:via-purple-300 to-violet-900 dark:to-violet-500 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-extrabold leading-tight mt-4 bg-gradient-to-r from-green-900 dark:from-green-500 via-emerald-600 dark:via-emerald-300 to-green-900 dark:to-green-500 text-transparent bg-clip-text"
             >
               {heading}
             </motion.h1>
@@ -95,7 +95,7 @@ const Template = ({
               className="inline-flex items-center gap-2 mt-6"
             >
               <GradientText
-                icon={<Clock className="w-4 h-4 text-violet-400" />}
+                icon={<Clock className="w-4 h-4 text-green-400" />}
                 title="Last Updated on July 1, 2025"
               />
             </motion.div>
