@@ -1,8 +1,30 @@
-"use client";
-
 import React from "react";
 import { Headset, Rows, Zap, ShieldCheck, Trash2 } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "Terms & Conditions | FoodSnap.in",
+  description:
+    "Understand the rules that govern your use of FoodSnap.in — a food image library built for food creators, marketers, and restaurants.",
+  keywords: [
+    "FoodSnap.in",
+    "Terms and Conditions",
+    "Food Images",
+    "Food Library",
+    "Image Licensing",
+    "Swiggy",
+    "Zomato",
+  ],
+  authors: [{ name: "FoodSnap", url: "https://foodsnap.in" }],
+  openGraph: {
+    title: "Terms & Conditions | FoodSnap.in",
+    description:
+      "Understand the rules that govern your use of FoodSnap.in — a food image library built for food creators, marketers, and restaurants.",
+    url: "https://foodsnap.in/terms-and-conditions",
+    siteName: "FoodSnap.in",
+    type: "website",
+  },
+};
 
 const cardData = [
   {

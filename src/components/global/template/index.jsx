@@ -41,10 +41,7 @@ const Template = ({
         <meta property="og:description" content={description} />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://app.foodsnap.in/logo.png"
-        />
+        <meta property="og:image" content="https://app.foodsnap.in/logo.png" />
 
         <script
           type="application/ld+json"

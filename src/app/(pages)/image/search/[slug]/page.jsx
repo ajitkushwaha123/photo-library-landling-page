@@ -17,7 +17,7 @@ export async function generateStaticParams() {
     }));
   } catch (err) {
     console.error("Error fetching titles:", err);
-    return []; 
+    return [];
   }
 }
 
@@ -27,17 +27,17 @@ export async function generateMetadata({ params }) {
   const canonical = `https://foodsnap.in/image/search/${slug}`;
 
   return {
-    title: `${title} - Foodsnap`,
-    description: `Download high-quality ${title} food images for menus, delivery apps, and restaurants.`,
+    title: `${title}image - Foodsnap`,
+    description: `Download high-quality ${title} food images for uploading on menus, delivery apps, and restaurants.`,
     alternates: { canonical },
     openGraph: {
-      title: `${title} - Foodsnap`,
+      title: `${title}image - Foodsnap`,
       description: `Get royalty-free ${title} dish photos for Zomato, Swiggy, or restaurant menus.`,
       url: canonical,
       type: "website",
       images: [
         {
-          url: `/og/${slug}.png`, 
+          url: `/og/${slug}.png`,
           width: 1200,
           height: 630,
           alt: `${title} image preview`,

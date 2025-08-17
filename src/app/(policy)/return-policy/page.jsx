@@ -1,8 +1,22 @@
-"use client";
-
 import React from "react";
 import { Headset, ShieldCheck, Trash2 } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "Return & Refund Policy | FoodSnap.in",
+  description:
+    "Understand our refund and cancellation policy for FoodSnap — your digital food image library subscription.",
+  keywords: [
+    "FoodSnap",
+    "refund policy",
+    "cancellation policy",
+    "digital food images",
+    "subscription",
+    "no refund",
+    "digital delivery",
+  ],
+  robots: "index, follow",
+};
 
 const cardData = [
   {

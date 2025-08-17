@@ -1,8 +1,23 @@
-"use client";
 
 import React from "react";
 import { Headset, ShieldCheck, Trash2 } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "Refund Policy - FoodSnap.in",
+  description:
+    "Understand our refund policy for digital food image subscriptions on FoodSnap.in. Instant access to images means refunds are limited to billing issues only.",
+  keywords:
+    "FoodSnap, Refund Policy, Digital Downloads, Food Images, Billing Issues",
+  openGraph: {
+    title: "Refund Policy - FoodSnap.in",
+    description:
+      "FoodSnap.in provides instant digital food images. Refunds are applicable only for billing errors.",
+    url: "https://foodsnap.in/refund-policy",
+    siteName: "FoodSnap.in",
+    type: "website",
+  },
+};
 
 const cardData = [
   {

@@ -1,8 +1,38 @@
-"use client";
 
 import React from "react";
 import { Headset, Rows, Zap, ShieldCheck, MessageCircle } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "FAQ - FoodSnap.in",
+  description:
+    "Find answers to common questions about using FoodSnap.in — from subscriptions, image approvals, usage rights, to support.",
+  keywords: [
+    "FoodSnap",
+    "FAQ",
+    "Food images",
+    "Swiggy",
+    "Zomato",
+    "Subscription",
+    "Commercial use",
+    "Support",
+  ],
+  authors: [{ name: "FoodSnap Team", url: "https://foodsnap.in" }],
+  openGraph: {
+    title: "FAQ - FoodSnap.in",
+    description:
+      "Find answers to common questions about using FoodSnap.in — from subscriptions, image approvals, usage rights, to support.",
+    url: "https://foodsnap.in/faq",
+    siteName: "FoodSnap.in",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ - FoodSnap.in",
+    description:
+      "Find answers to common questions about using FoodSnap.in — from subscriptions, image approvals, usage rights, to support.",
+  },
+};
 
 const cardData = [
   {

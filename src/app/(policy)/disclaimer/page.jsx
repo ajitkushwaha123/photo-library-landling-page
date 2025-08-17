@@ -1,8 +1,37 @@
-"use client";
 
 import React from "react";
 import { Headset, ShieldCheck, AlertTriangle } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "Disclaimer - FoodSnap.in",
+  description:
+    "Understand the scope, limitations, and responsibilities of using digital content provided by FoodSnap.in. Learn about usage rights, platform compatibility, and user responsibilities.",
+  keywords: [
+    "FoodSnap",
+    "Disclaimer",
+    "Image usage",
+    "Swiggy images",
+    "Zomato images",
+    "Food listing",
+    "User responsibility",
+  ],
+  authors: [{ name: "FoodSnap Team", url: "https://foodsnap.in" }],
+  openGraph: {
+    title: "Disclaimer - FoodSnap.in",
+    description:
+      "Understand the scope, limitations, and responsibilities of using digital content provided by FoodSnap.in.",
+    url: "https://foodsnap.in/disclaimer",
+    siteName: "FoodSnap.in",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Disclaimer - FoodSnap.in",
+    description:
+      "Understand the scope, limitations, and responsibilities of using digital content provided by FoodSnap.in.",
+  },
+};
 
 const cardData = [
   {

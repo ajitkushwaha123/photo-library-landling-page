@@ -1,8 +1,37 @@
-"use client";
-
 import React from "react";
 import { Bug, Mail, MapPin, Headset } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "Report an Issue - FoodSnap",
+  description:
+    "Found an issue in a food image or can't access your downloads? Contact FoodSnap support for fast help and reporting image problems.",
+  keywords: [
+    "FoodSnap support",
+    "report food image",
+    "food image issues",
+    "image problem",
+    "food library support",
+    "download issue",
+  ],
+  openGraph: {
+    title: "Report an Issue - FoodSnap",
+    description:
+      "Found an issue in a food image or can't access your downloads? Contact FoodSnap support for fast help and reporting image problems.",
+    url: "https://foodsnap.in/report-issue",
+    siteName: "FoodSnap",
+    images: [
+      {
+        url: "https://foodsnap.in/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Report an Issue at FoodSnap",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 const cardData = [
   {

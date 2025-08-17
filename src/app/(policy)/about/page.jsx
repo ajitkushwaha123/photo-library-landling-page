@@ -1,8 +1,6 @@
-"use client";
 
-import React from "react";
-import { Users, Rocket, Target, HeartHandshake } from "lucide-react";
 import Template from "@/components/global/template";
+import { Users, Rocket, Target, HeartHandshake } from "lucide-react";
 
 const cardData = [
   {
@@ -107,13 +105,45 @@ const contactData = {
   ),
 };
 
-const page = () => {
+export const metadata = {
+  title: "About FoodSnap.in – The Photo Library for Food Businesses",
+  description:
+    "Learn how FoodSnap is helping restaurants and creators find stunning, platform-ready food images — without the hassle.",
+  alternates: {
+    canonical: "https://foodsnap.in/about",
+    languages: {
+      en: "https://foodsnap.in/about",
+    },
+  },
+  openGraph: {
+    title: "About FoodSnap.in – The Photo Library for Food Businesses",
+    description:
+      "Learn how FoodSnap is helping restaurants and creators find stunning, platform-ready food images — without the hassle.",
+    url: "https://foodsnap.in/about",
+    type: "website",
+    images: [
+      {
+        url: "https://foodsnap.in/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "FoodSnap Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About FoodSnap.in – The Photo Library for Food Businesses",
+    description:
+      "Learn how FoodSnap is helping restaurants and creators find stunning, platform-ready food images — without the hassle.",
+  },
+};
+
+export default function AboutPage() {
   return (
     <Template
       title="About FoodSnap.in"
       heading={
         <div>
-          About Us <br className="hidden sm:block" />
           The Photo Library for Food Businesses
         </div>
       }
@@ -130,6 +160,4 @@ const page = () => {
       contactData={contactData}
     />
   );
-};
-
-export default page;
+}

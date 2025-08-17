@@ -1,9 +1,35 @@
-"use client";
 
 import Template from "@/components/global/template";
 import { Headset } from "lucide-react";
 import React from "react";
 import { Rows, Zap, ShieldCheck, Trash2 } from "lucide-react";
+
+export const metadata = {
+  title: "Privacy Policy - FoodSnap.in",
+  description:
+    "Learn how FoodSnap.in collects, uses, and safeguards your personal information with full transparency and control.",
+  keywords: [
+    "Privacy Policy",
+    "FoodSnap.in",
+    "Data Protection",
+    "Personal Information",
+    "User Rights",
+  ],
+  openGraph: {
+    title: "Privacy Policy - FoodSnap.in",
+    description:
+      "Learn how FoodSnap.in collects, uses, and safeguards your personal information with full transparency and control.",
+    url: "https://foodsnap.in/privacy-policy",
+    siteName: "FoodSnap.in",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy - FoodSnap.in",
+    description:
+      "Learn how FoodSnap.in collects, uses, and safeguards your personal information with full transparency and control.",
+  },
+};
 
 const cardData = [
   {

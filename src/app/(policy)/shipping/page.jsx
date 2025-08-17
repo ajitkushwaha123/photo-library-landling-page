@@ -1,8 +1,20 @@
-"use client";
-
 import React from "react";
 import { Headset, ShieldCheck, Trash2 } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "Shipping & Digital Delivery Policy | FoodSnap",
+  description:
+    "Learn about FoodSnap.in's shipping and digital delivery policies. Access our curated food image library instantly after subscription. No physical shipping involved.",
+  keywords: [
+    "FoodSnap",
+    "Digital Delivery",
+    "Food Images",
+    "Subscription Policy",
+    "Shipping Policy",
+    "Instant Access",
+  ],
+};
 
 const cardData = [
   {
@@ -129,15 +141,14 @@ const contactData = {
 const page = () => {
   return (
     <Template
-      title="Return & Refund Policy"
+      title="Shipping & Digital Delivery Policy"
       heading={
         <div>
-          Refund & Cancellation <br className="hidden sm:block" />
-          Policy for FoodSnap Subscriptions
+          Shipping & Digital Delivery <br className="hidden sm:block" /> Policy
         </div>
       }
-      description="Understand our refund and cancellation policy for FoodSnap — your digital food image library subscription."
-      ctaDescription="FoodSnap is a digital-only platform. Once subscribed, you get full access to our pre-approved image collection. No refunds or returns are permitted after subscription."
+      description="Understand FoodSnap.in's shipping and digital delivery policies for your subscription."
+      ctaDescription="FoodSnap is a digital-only platform. Once subscribed, you get full access to our pre-approved image collection. No physical shipping is involved."
       ctaLink="/report-issue"
       ctaButton={
         <span className="flex items-center gap-2">

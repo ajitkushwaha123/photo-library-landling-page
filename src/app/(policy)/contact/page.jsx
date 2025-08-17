@@ -1,8 +1,43 @@
-"use client";
 
 import React from "react";
 import { Mail, Phone, MapPin, Headset } from "lucide-react";
 import Template from "@/components/global/template";
+
+export const metadata = {
+  title: "Contact Us | FoodSnap.in",
+  description:
+    "Need help with your subscription or downloading images? Contact the FoodSnap.in team for support and assistance.",
+  keywords: [
+    "FoodSnap contact",
+    "food images support",
+    "customer support",
+    "report issue",
+    "download images help",
+  ],
+  openGraph: {
+    title: "Contact Us | FoodSnap.in",
+    description:
+      "Need help with your subscription or downloading images? Contact the FoodSnap.in team for support and assistance.",
+    url: "https://foodsnap.in/contact",
+    siteName: "FoodSnap.in",
+    images: [
+      {
+        url: "https://foodsnap.in/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | FoodSnap.in",
+    description:
+      "Need help with your subscription or downloading images? Contact the FoodSnap.in team for support and assistance.",
+    images: ["https://foodsnap.in/og-image.png"],
+  },
+};
 
 const cardData = [
   {
