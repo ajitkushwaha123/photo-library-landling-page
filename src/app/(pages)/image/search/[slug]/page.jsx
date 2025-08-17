@@ -2,6 +2,7 @@ import { deslugify, slugify } from "@/lib/slug";
 import { notFound } from "next/navigation";
 import axios from "axios";
 import InfiniteImageGrid from "@/components/global/image/infinite-image-grid";
+import SearchBar from "@/components/global/image/search-bar";
 
 export const revalidate = 86400;
 
@@ -27,11 +28,11 @@ export async function generateMetadata({ params }) {
   const canonical = `https://foodsnap.in/image/search/${slug}`;
 
   return {
-    title: `${title}image - Foodsnap`,
+    title: `${title} image - Foodsnap`,
     description: `Download high-quality ${title} food images for uploading on menus, delivery apps, and restaurants.`,
     alternates: { canonical },
     openGraph: {
-      title: `${title}image - Foodsnap`,
+      title: `${title} image - Foodsnap`,
       description: `Get royalty-free ${title} dish photos for Zomato, Swiggy, or restaurant menus.`,
       url: canonical,
       type: "website",
@@ -76,14 +77,33 @@ export default async function ImagePage({ params }) {
   }
 
   return (
-    <main className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4 capitalize">{title}</h1>
+    <main className="container mx-auto p-4 mt-16">
+      <div>
+        <SearchBar />
+      </div>
+      <div className="text-center my-8">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-2 capitalize text-gray-900 dark:text-white">
+          {title}
+        </h1>
+        <p className="text-gray-600 dark:text-gray-300 text-lg">
+          Explore and download high-quality {title} images for restaurant menus,
+          Zomato, and Swiggy.
+        </p>
+      </div>
+
+      <div className="mb-6 text-sm text-gray-500 dark:text-gray-400 text-center">
+        Showing {foods.data.length} images | Page {foods.page} of{" "}
+        {foods.totalPages}
+      </div>
 
       <InfiniteImageGrid
         slug={slug}
         initialData={foods.data}
         initialPage={foods.page}
         totalPages={foods.totalPages}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+        cardClassName="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        imgClassName="w-full h-56 object-cover group-hover:scale-105 group-hover:brightness-110 transition-all duration-500"
       />
     </main>
   );

@@ -4,11 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import DownloadDropdown from "../../dropdown";
 
-const Card = ({ image, index }) => {
+const Card = ({ image, index, slug }) => {
   return (
     <motion.figure
+      key={image._id || index}
       viewport={{ once: true }}
-      className="relative overflow-hidden rounded-md bg-white dark:bg-zinc-900 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 group"
+      className="relative overflow-hidden rounded-md bg-white dark:bg-zinc-900 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent group"
     >
       <div className="relative">
         <motion.img
@@ -24,14 +25,13 @@ const Card = ({ image, index }) => {
           className="w-full h-56 sm:h-64 object-cover rounded-md group-hover:scale-105 transition-transform duration-500"
         />
 
-        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-md" />
 
-        {/* Dropdown replaces single button */}
         <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300">
           <DownloadDropdown
-            withWatermarkUrl={image.with_watermark_url}
-            withoutWatermarkUrl={image.image_url}
+            withWatermarkUrl={image.image_url}
+            withoutWatermarkUrl={`https://app.foodsnap.in?search=${slug}`}
+            title={image.title}
           />
         </div>
       </div>
@@ -42,7 +42,6 @@ const Card = ({ image, index }) => {
         </figcaption>
       )}
 
-      {/* SEO Schema */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",

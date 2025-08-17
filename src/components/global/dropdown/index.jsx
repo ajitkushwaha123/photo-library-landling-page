@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Download, ImageDown, Image as ImageIcon, Loader2 } from "lucide-react";
 
 export default function DownloadDropdown({
+  title = "Image",
   withWatermarkUrl,
   withoutWatermarkUrl,
 }) {
@@ -39,37 +40,44 @@ export default function DownloadDropdown({
       <DropdownMenuTrigger asChild>
         <Button
           disabled={loading}
-          className="flex items-center gap-2 rounded-full bg-gray-500 text-white shadow-md hover:shadow-lg transition-all duration-300"
+          className="flex items-center justify-center gap-2 rounded-full bg-gray-800 text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
         >
           {loading ? (
-            <Loader2 className="w-4 h-4 animate-spin" />
+            <Loader2 className="w-5 h-5 animate-spin" />
           ) : (
-            <Download className="w-4 h-4" />
+            <Download className="w-5 h-5" />
           )}
         </Button>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent
         align="end"
-        className="w-60 rounded-xl shadow-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-2"
+        className="w-60 rounded-xl shadow-2xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-2 animate-slide-down"
       >
         <DropdownMenuItem
-          className="flex items-center gap-2 rounded-md px-3 py-2 cursor-pointer transition-colors hover:bg-blue-100 dark:hover:bg-blue-900"
-          onClick={() => handleDownload(withWatermarkUrl, "with-watermark.jpg")}
+          onClick={() => handleDownload(withWatermarkUrl, `${title}.jpg`)}
+          className="flex items-center gap-3 rounded-lg px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-blue-50 dark:hover:bg-blue-900"
         >
-          <ImageDown className="w-4 h-4 text-blue-500" />
-          <span className="text-sm font-medium">Download</span>
+          <ImageDown className="w-5 h-5 text-blue-500" />
+          <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+            Download
+          </span>
         </DropdownMenuItem>
 
-        <DropdownMenuItem
-          className="flex items-center gap-2 rounded-md px-3 py-2 cursor-pointer transition-colors hover:bg-purple-100 dark:hover:bg-purple-900"
-          onClick={() =>
-            handleDownload(withoutWatermarkUrl, "without-watermark.jpg")
-          }
-        >
-          <ImageIcon className="w-4 h-4 text-purple-500" />
-          <span className="text-sm font-medium">Remove Watermark</span>
-        </DropdownMenuItem>
+        {withoutWatermarkUrl && (
+          <a
+            href={withoutWatermarkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <DropdownMenuItem className="flex items-center gap-3 rounded-lg px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-purple-50 dark:hover:bg-purple-900">
+              <ImageIcon className="w-5 h-5 text-purple-500" />
+              <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                Remove Watermark
+              </span>
+            </DropdownMenuItem>
+          </a>
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   );

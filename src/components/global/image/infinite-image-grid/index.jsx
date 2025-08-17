@@ -42,7 +42,6 @@ export default function InfiniteImageGrid({
     }
   }, [loading, hasNextPage, page, slug]);
 
-  // IntersectionObserver for infinite scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -68,13 +67,12 @@ export default function InfiniteImageGrid({
         {foods.map((food) => {
           const foodSlug = slugify(food.title);
           return (
-            <Link
+            <div
               key={food._id}
-              href={`/food/${foodSlug}`}
               className="block border rounded-lg overflow-hidden shadow hover:shadow-lg transition"
             >
-              <Card image={food} index={food._id} />
-            </Link>
+              <Card slug={foodSlug} image={food} index={food._id} />
+            </div>
           );
         })}
       </div>
