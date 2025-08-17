@@ -1,38 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
-import toast from "react-hot-toast";
+import DownloadDropdown from "../../dropdown";
 
 const Card = ({ image, index }) => {
-  const [downloading, setDownloading] = useState(false);
-
-  const handleDownload = async () => {
-    try {
-      setDownloading(true);
-
-      const response = await fetch(image.image_url);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = blobUrl;
-      link.download = `${image.title || "foodsnap-food-image"}.jpg`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(blobUrl);
-
-      toast.success("Image downloaded!");
-    } catch (error) {
-      console.error("Download failed:", error);
-      toast.error("Image download failed.");
-    } finally {
-      setDownloading(false);
-    }
-  };
-
   return (
     <motion.figure
       viewport={{ once: true }}
@@ -52,19 +24,16 @@ const Card = ({ image, index }) => {
           className="w-full h-56 sm:h-64 object-cover rounded-md group-hover:scale-105 transition-transform duration-500"
         />
 
+        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-md" />
 
-        <button
-          onClick={handleDownload}
-          aria-label={`Download ${image.title || "food"} image`}
-          className="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur-md p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 flex items-center justify-center"
-        >
-          {downloading ? (
-            <span className="w-6 h-6 border-4 border-t-transparent border-blue-500 dark:border-white rounded-full animate-spin" />
-          ) : (
-            <Download className="w-5 h-5 text-black dark:text-white" />
-          )}
-        </button>
+        {/* Dropdown replaces single button */}
+        <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300">
+          <DownloadDropdown
+            withWatermarkUrl={image.with_watermark_url}
+            withoutWatermarkUrl={image.image_url}
+          />
+        </div>
       </div>
 
       {image.title && (
@@ -73,6 +42,7 @@ const Card = ({ image, index }) => {
         </figcaption>
       )}
 
+      {/* SEO Schema */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
