@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import DownloadDropdown from "../../dropdown";
-
 const Card = ({ image, index, slug }) => {
   return (
     <motion.figure
@@ -56,6 +55,11 @@ const Card = ({ image, index, slug }) => {
             name: "Foodsnap",
             url: "https://foodsnap.in",
           },
+          creditText:
+            "Image courtesy of Foodsnap.in (curated from Zomato/Google sources)",
+          copyrightNotice: "© Original rights holders / Curated by Foodsnap.in",
+          license: "https://foodsnap.in/license",
+          acquireLicensePage: "https://foodsnap.in/acquire-image-rights",
         })}
       </script>
     </motion.figure>

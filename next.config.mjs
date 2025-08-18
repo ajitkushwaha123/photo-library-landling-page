@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  esmExternals: false,
-};
+const nextConfig = {};
 
 export default nextConfig;
