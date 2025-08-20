@@ -6,12 +6,12 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const plans = {
   monthly: [
-    {
-      name: "Basic",
-      price: "Free",
-      features: ["View sample food photos", "Limited access"],
-      button: "Get Started",
-    },
+    // {
+    //   name: "Basic",
+    //   price: "Free",
+    //   features: ["View sample food photos", "Limited access"],
+    //   button: "Get Started",
+    // },
     {
       name: "Premium",
       price: "₹999/mo",
@@ -165,7 +165,7 @@ export default function PricingSection() {
             </ul>
 
             <a
-              href="https://app.foodsnap.in/pricing"
+              href="https://app.foodsnap.in/sign-up?redirect=%2Fpricing"
               className={`w-full py-2 rounded-lg font-medium flex items-center justify-center gap-2 transition-all ${
                 plan.highlight
                   ? "bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"

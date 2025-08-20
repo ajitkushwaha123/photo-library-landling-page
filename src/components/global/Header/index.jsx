@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -63,7 +64,7 @@ export default function Header() {
         <div className="flex items-center gap-3 md:gap-4">
           <ModeToggle />
           <motion.a
-            href="https://app.foodsnap.in"
+            href="https://app.foodsnap.in/sign-up?redirect=%2Fpricing"
             target="_blank"
             className="hidden md:inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-md text-sm font-semibold shadow-md hover:shadow-xl transition-all"
             initial={{ opacity: 0, scale: 0.95 }}

@@ -14,6 +14,7 @@ import WhyChooseUs from "./whyChooseUs";
 import AboutPlatform from "./AboutThisPlatform";
 import OutletPhotoCompare from "./OutletPhotoCompare";
 import OutletCompare from "./OutletCompare";
+import MasonryGallery from "../galllery";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -60,27 +61,34 @@ export default function Home() {
           transition={{ duration: 0.9, delay: 0.4 }}
           className="mt-10 flex gap-4 flex-wrap justify-center"
         >
+          {/* <a href="#gallery">
+            <button className="border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-xl transition-all shadow-sm">
+              View
+            </button>
+          </a> */}
           <a
-            href="https://app.foodsnap.in/pricing"
+            href="https://app.foodsnap.in/sign-up?redirect=%2Fpricing"
             target="_blank"
             className="bg-green-500 hover:bg-green-600 text-white font-semibold
             px-6 py-3 rounded-xl flex items-center gap-2 transition-all shadow"
           >
             {" "}
-            View Pricing <ArrowRight className="w-4 h-4" />
+            Get Subscription <ArrowRight className="w-4 h-4" />
           </a>
 
-          <a href="https://app.foodsnap.in/sign-up" target="_blank">
+          {/* <a href="https://app.foodsnap.in/pricing" target="_blank">
             <button className="border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-xl transition-all shadow-sm">
               Try Now
             </button>
-          </a>
+          </a> */}
         </motion.div>
       </div>
 
       <div className="mt-12 md:mt-20 px-4">
         <Video />
       </div>
+
+      <MasonryGallery />
 
       <OutletPhotoCompare />
       <OutletCompare />
