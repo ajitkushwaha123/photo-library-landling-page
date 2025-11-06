@@ -3,7 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import AppShell from "@/components/global/AppShell";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,7 +21,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${poppins.variable}  font-poppins antialiased`}>
+      <body className={`${poppins.variable} font-poppins antialiased`}>
+        {/* Theme + AppShell */}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -30,22 +32,36 @@ export default function RootLayout({ children }) {
           <AppShell>{children}</AppShell>
         </ThemeProvider>
 
+        {/* Analytics */}
         <Analytics />
+        <SpeedInsights />
 
+        {/* ✅ Microsoft Clarity (free session recording) */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "u1zyl05z4t");
+          `}
+        </Script>
+
+        {/* ✅ Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DDZXQ7G4VW"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-             window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DDZXQ7G4VW');
-            `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DDZXQ7G4VW');
+          `}
         </Script>
 
+        {/* ✅ Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)

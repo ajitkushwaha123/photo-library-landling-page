@@ -15,6 +15,7 @@ import AboutPlatform from "./AboutThisPlatform";
 import OutletPhotoCompare from "./OutletPhotoCompare";
 import OutletCompare from "./OutletCompare";
 import MasonryGallery from "../galllery";
+import ZomatoApproved from "./ZomatoApproved";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -69,24 +70,28 @@ export default function Home() {
           <a
             href="https://app.foodsnap.in/sign-up?redirect=%2Fpricing"
             target="_blank"
-            className="bg-green-500 hover:bg-green-600 text-white font-semibold
-            px-6 py-3 rounded-xl flex items-center gap-2 transition-all shadow"
+            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl 
+  bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 
+  px-7 py-3.5 font-semibold text-white transition-all duration-300 
+  shadow-md hover:shadow-lg hover:scale-[1.04] active:scale-[0.97]"
           >
-            {" "}
-            Get Subscription <ArrowRight className="w-4 h-4" />
+            <span className="relative z-10 flex items-center gap-2">
+              Get Zomato Approved Images
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+    bg-gradient-to-r from-emerald-600 to-green-700 blur-xl"
+            />
           </a>
-
-          {/* <a href="https://app.foodsnap.in/pricing" target="_blank">
-            <button className="border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-xl transition-all shadow-sm">
-              Try Now
-            </button>
-          </a> */}
         </motion.div>
       </div>
 
       <div className="mt-12 md:mt-20 px-4">
         <Video />
       </div>
+
+      <ZomatoApproved />
 
       <MasonryGallery />
 

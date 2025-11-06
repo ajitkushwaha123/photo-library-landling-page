@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     icon: Sparkles,
-    question: "What do I get with the ₹999/month subscription?",
+    question: "What do I get with the ₹1999 subscription?",
     answer:
       "You get full access to Zomato-ready images, new weekly uploads, commercial rights, and one-click downloads.",
   },
@@ -46,8 +46,7 @@ const faqs = [
   {
     icon: XCircle,
     question: "Can I cancel anytime?",
-    answer:
-      "Yes. It's a simple monthly plan — no lock-ins, cancel anytime before renewal.",
+    answer: "Yes. It's a simple credit based plans — no lock-ins.",
   },
   {
     icon: CalendarClock,
