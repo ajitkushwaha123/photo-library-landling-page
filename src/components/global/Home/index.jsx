@@ -76,7 +76,7 @@ export default function Home() {
   shadow-md hover:shadow-lg hover:scale-[1.04] active:scale-[0.97]"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Get Zomato Approved Images
+              Download Images
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
             <div
@@ -91,9 +91,9 @@ export default function Home() {
         <Video />
       </div>
 
-      <ZomatoApproved />
-
       <MasonryGallery />
+
+      <ZomatoApproved />
 
       <OutletPhotoCompare />
       <OutletCompare />

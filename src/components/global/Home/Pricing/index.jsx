@@ -67,16 +67,11 @@ export const plans = [
 
 export default function PricingSection() {
   return (
-    <section
-      id="pricing"
-      className="relative px-4 py-16 md:py-24 text-center bg-gradient-to-b from-white via-purple-50/40 to-indigo-50/30 dark:from-[#0e0e1a] dark:via-[#15152a] dark:to-[#0e0e1a]"
-    >
-      {/* Background light glow */}
+    <section id="pricing" className="relative px-4 py-16 md:py-24 text-center">
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-300/30 dark:bg-purple-700/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px]" />
       </div>
 
-      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -96,7 +91,6 @@ export default function PricingSection() {
         kitchens to fine dining.
       </motion.p>
 
-      {/* Pricing Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {plans.map((plan) => (
           <motion.div
@@ -122,7 +116,6 @@ export default function PricingSection() {
               </span>
             )}
 
-            {/* Plan Info */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
                 {plan.name}
@@ -145,7 +138,6 @@ export default function PricingSection() {
               ))}
             </ul>
 
-            {/* CTA */}
             <motion.a
               href={`https://app.foodsnap.in/${plan.link}`}
               whileTap={{ scale: 0.97 }}
