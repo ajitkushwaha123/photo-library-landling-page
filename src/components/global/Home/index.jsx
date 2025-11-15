@@ -68,7 +68,7 @@ export default function Home() {
             </button>
           </a> */}
           <a
-            href="https://app.foodsnap.in/sign-up?redirect=%2Fpricing"
+            href="https://app.foodsnap.in/sign-up"
             target="_blank"
             className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl 
   bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 
