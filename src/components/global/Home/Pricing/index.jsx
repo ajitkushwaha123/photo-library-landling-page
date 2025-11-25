@@ -48,21 +48,6 @@ export const plans = [
     link: "/payment/cart?plan=pro",
     highlight: true,
   },
-  {
-    key: "unlimited",
-    name: "Unlimited Plan",
-    price: "₹1999",
-    description: "Unlimited downloads and full premium access.",
-    features: [
-      "Unlimited downloads",
-      "Full access to photo library",
-      "Priority photo request handling",
-      "Access to trending food packs",
-    ],
-    button: "Go Unlimited",
-    link: "/payment/cart?plan=unlimited",
-    highlight: true,
-  },
 ];
 
 export default function PricingSection() {
