@@ -1,23 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const badges = [
   {
     label: "Zomato Partner",
-    img: "https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png",
+    img: "/assets/badges/zomato_logo.png",
   },
   {
     label: "SSL Secured",
-    img: "https://www.ssl.com/wp-content/uploads/2020/11/ssl-secure-connection.png",
+    img: "/assets/badges/ssl_secure_connection.svg",
   },
   {
     label: "Verified Photos",
-    img: "https://cdn-icons-png.flaticon.com/512/190/190411.png",
+    img: "/assets/badges/verified_photos.png",
   },
   {
     label: "Secure Payments",
-    img: "https://cdn-icons-png.flaticon.com/512/891/891419.png",
+    img: "/assets/badges/secure_payments.png",
   },
 ];
 
@@ -40,9 +41,11 @@ export default function TrustBadges() {
             whileHover={{ scale: 1.1 }}
             className="flex flex-col items-center space-y-2"
           >
-            <img
+            <Image
               src={badge.img}
               alt={badge.label}
+              width={64}
+              height={64}
               className="h-16 w-16 object-contain drop-shadow-lg"
             />
             <p className="text-sm text-center">{badge.label}</p>

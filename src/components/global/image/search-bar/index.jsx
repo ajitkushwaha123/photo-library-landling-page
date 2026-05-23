@@ -13,7 +13,7 @@ const SearchBar = () => {
 
     setLoadingSearch(true);
 
-    const searchUrl = `https://app.foodsnap.in?search=${encodeURIComponent(
+    const searchUrl = `${process.env.NEXT_PUBLIC_USER_APP_URL || "https://app.foodsnap.in"}?search=${encodeURIComponent(
       query
     )}`;
     window.location.href = searchUrl;

@@ -7,7 +7,3 @@ export function slugify(input) {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 }
-
-export function deslugify(slug) {
-  return slug.replace(/-/g, " ").replace(/\s+/g, " ").trim();
-}

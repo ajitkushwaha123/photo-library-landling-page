@@ -124,7 +124,7 @@ export default function PricingSection() {
             </ul>
 
             <motion.a
-              href={`https://app.foodsnap.in/${plan.link}`}
+              href={`${process.env.NEXT_PUBLIC_USER_APP_URL || "https://app.foodsnap.in"}${plan.link}`}
               whileTap={{ scale: 0.97 }}
               className={`mt-6 w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all 
                 ${

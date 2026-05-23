@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "FoodSnap.in",
     images: [
       {
-        url: "https://foodsnap.in/og-image.png",
+        url: "https://foodsnap.in/og-image.webp",
         width: 1200,
         height: 630,
       },
@@ -35,7 +35,7 @@ export const metadata = {
     title: "Contact Us | FoodSnap.in",
     description:
       "Need help with your subscription or downloading images? Contact the FoodSnap.in team for support and assistance.",
-    images: ["https://foodsnap.in/og-image.png"],
+    images: ["https://foodsnap.in/og-image.webp"],
   },
 };
 

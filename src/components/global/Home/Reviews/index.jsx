@@ -10,21 +10,21 @@ const testimonials = [
     title: "Restaurant Owner, Caffeine",
     quote:
       "Zomato pe listing ekdum classy lag rahi hai ab! Bas photos change kiye aur orders 3x badh gaye. Mazaa aa gaya!",
-    img: "https://b.zmtcdn.com/merchant/diy/pictures/7/21783367/12ba37b49ddcdfed026091b8f8845bb8.jpeg",
+    img: "/assets/reviews/client_rohit.webp",
   },
   {
     name: "Anjali Mehra",
     title: "Founder, Cozy Spot Cafe",
     quote:
       "Pehle lagta tha Swiggy ka onboarding tough hoga, par inhone sab kuch smoothly handle kiya. 10/10 support!",
-    img: "https://b.zmtcdn.com/merchant/diy/pictures/0/22015050/0f45d0056ce66d5d8df2af8941353f7a.png",
+    img: "/assets/reviews/client_anjali.webp",
   },
   {
     name: "Karan Desai",
     title: "Owner, Spicy Kulcha Factory",
     quote:
       "Photos dekhte hi lagta hai brand premium hai. Paisa vasool hai bhai, ek week mein hi return aa gaya!",
-    img: "https://b.zmtcdn.com/merchant/diy/pictures/0/21380380/95e197cd95db36e88df8a7fe87689d64.jpg",
+    img: "/assets/reviews/client_karan.webp",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function Testimonials() {
               “{t.quote}”
             </p>
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src={t.img}
                 alt={t.name}
                 width={40}

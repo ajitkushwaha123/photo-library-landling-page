@@ -26,7 +26,7 @@ export default function InfiniteImageGrid({
     try {
       const res = await axios.get(
         `${
-          process.env.NEXT_PUBLIC_APP_URL
+          process.env.NEXT_PUBLIC_BASE_URL
         }/api/image/search/${encodeURIComponent(slug)}?page=${
           page + 1
         }&limit=20`

@@ -3,12 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 const zomatoImages = [
-  "/assets/zomato-approved-1.png",
-  "/assets/zomato-approved-2.png",
-  "/assets/zomato-approved-3.png",
-  "/assets/zomato-approved-4.png",
+  "/assets/zomato-approved/zomato-approved-1.webp",
+  "/assets/zomato-approved/zomato-approved-2.webp",
+  "/assets/zomato-approved/zomato-approved-3.webp",
+  "/assets/zomato-approved/zomato-approved-4.webp",
 ];
 
 const ZomatoApproved = () => {
@@ -45,9 +46,11 @@ const ZomatoApproved = () => {
           >
             <Card className="max-w-6xl mx-auto rounded-2xl border border-neutral-200 dark:border-neutral-700 p-2 md:p-4 backdrop-blur-xl bg-white/60 dark:bg-[#10101a]/70 shadow-[0_10px_35px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_35px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_20px_45px_rgba(0,0,0,0.5)]">
               <div className="relative overflow-hidden p-4 rounded-md">
-                <img
+                <Image
                   src={src}
                   alt={`Zomato approved ${i + 1}`}
+                  width={600}
+                  height={450}
                   className="w-full object-cover rounded-md transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -72,7 +75,7 @@ const ZomatoApproved = () => {
             </p>
 
             <motion.a
-              href="https://app.foodsnap.in/sign-up?redirect=%2Fpricing"
+              href={`${process.env.NEXT_PUBLIC_USER_APP_URL || "https://app.foodsnap.in"}/sign-up?redirect=%2Fpricing`}
               target="_blank"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}

@@ -64,7 +64,7 @@ export default function Header() {
         <div className="flex items-center gap-3 md:gap-4">
           <ModeToggle />
           <motion.a
-            href="https://app.foodsnap.in/sign-up?redirect=%2Fpricing"
+            href={`${process.env.NEXT_PUBLIC_USER_APP_URL || "https://app.foodsnap.in"}/sign-up?redirect=%2Fpricing`}
             target="_blank"
             className="hidden md:inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-md text-sm font-semibold shadow-md hover:shadow-xl transition-all"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -103,7 +103,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="https://app.foodsnap.in"
+              href={process.env.NEXT_PUBLIC_USER_APP_URL || "https://app.foodsnap.in"}
               target="_blank"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center mt-2 text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-sm font-semibold transition"

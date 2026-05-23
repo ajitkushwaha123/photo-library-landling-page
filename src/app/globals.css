@@ -13,7 +13,7 @@ body {
 
 @theme {
   --color-darkBackground: #0a0a1a;
-  --background-image: url("/assets/backgroundgrid.png");
+  --background-image: url("/assets/backgroundgrid.webp");
 }
 
 /* globals.css or tailwind config */
@@ -48,9 +48,9 @@ body {
 }
 
 .bg-grid {
-  background-image: url("/assets/background-grid.png");
+  background-image: url("/assets/background-grid.webp");
 }
 
 .dark .bg-grid-dark {
-  background-image: url("/assets/background-grid.png");
+  background-image: url("/assets/background-grid.webp");
 }

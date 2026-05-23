@@ -9,20 +9,21 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const imageSlides = [
   {
-    src: "/assets/BEFORE1.png",
+    src: "/assets/compare/BEFORE1.webp",
     alt: "Before and After Comparison 1",
     caption: "❌ Before → ✅ After: See the clarity difference side by side.",
   },
   {
-    src: "/assets/BEFORE2.png",
+    src: "/assets/compare/BEFORE2.webp",
     alt: "Before and After Comparison 2",
     caption: "Better lighting, better colors — instant visual upgrade.",
   },
   {
-    src: "/assets/BEFORE3.png",
+    src: "/assets/compare/BEFORE3.webp",
     alt: "Before and After Comparison 3",
     caption: "📈 More trust. More orders. Just better photos.",
   },
@@ -61,9 +62,11 @@ export default function OutletComparisonSection() {
             {imageSlides.map((slide, index) => (
               <CarouselItem key={index} className="min-w-full px-2">
                 <div className="w-full overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md dark:shadow-lg transition-all duration-300">
-                  <img
+                  <Image
                     src={slide.src}
                     alt={slide.alt}
+                    width={500}
+                    height={350}
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -92,9 +95,11 @@ export default function OutletComparisonSection() {
             className="w-full md:w-[30%] flex flex-col items-center px-2"
           >
             <div className="w-full overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md dark:shadow-lg transition-all duration-300">
-              <img
+              <Image
                 src={slide.src}
                 alt={slide.alt}
+                width={500}
+                height={350}
                 className="w-full h-auto object-cover"
               />
             </div>

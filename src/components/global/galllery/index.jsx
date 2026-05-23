@@ -1,85 +1,86 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const IMAGES = [
   {
     id: 1,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755675301/photo_library/opjqpjkrdgnvekeakcqs.jpg",
+    src: "/assets/gallery/chocolate_praline_cake.webp",
     alt: "Chocolate Praline Cake",
   },
   {
     id: 2,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1754555433/photo_library/iomtvj3tjyo1grxw6okl.jpg",
+    src: "/assets/gallery/coconut_rava_paneer_dosa.webp",
     alt: "Coconut Rava Paneer Dosa",
   },
   {
     id: 3,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1754037540/photo_library/cduw7aiyvask99tnozsa.jpg",
+    src: "/assets/gallery/idli_sambhar.webp",
     alt: "Idli Sambhar",
   },
   {
     id: 4,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1753976890/photo_library/rjgr6oocmrtuqnd5uhm0.jpg",
+    src: "/assets/gallery/rajma_chawal.webp",
     alt: "Rajma Chawal",
   },
   {
     id: 5,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755012042/photo_library/hfwwxqmkbg6lwcdmz8nj.jpg",
+    src: "/assets/gallery/mango_shake.webp",
     alt: "Mango Shake",
   },
   {
     id: 6,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755624394/photo_library/tbxvfdrue5ir06gkukol.jpg",
+    src: "/assets/gallery/classic_shroom_burger.webp",
     alt: "Classic Shroom Burger",
   },
   {
     id: 7,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755666819/photo_library/mr1jmddrsjk8yyq7uoj9.jpg",
-    alt: "Paneer Tikka Roll ",
+    src: "/assets/gallery/paneer_tikka_roll.webp",
+    alt: "Paneer Tikka Roll",
   },
   {
     id: 8,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755668981/photo_library/tzigt2ncbw9tq0vmfkvq.jpg",
+    src: "/assets/gallery/veggie_balls_and_veg_seekh_sub.webp",
     alt: "Veggie Balls and Veg Seekh Sub",
   },
   {
     id: 9,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755670902/photo_library/yxzzdpg4v6hajb09kdv7.jpg",
-    alt: "Veg Momos Steam ",
+    src: "/assets/gallery/veg_momos_steam.webp",
+    alt: "Veg Momos Steam",
   },
   {
     id: 10,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755670932/photo_library/nyrusrybnxbiunhzhzl0.jpg",
+    src: "/assets/gallery/paneer_steamed_momos.webp",
     alt: "Paneer Steamed Momos",
   },
   {
     id: 11,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755672979/photo_library/qlxyq5gmjs3ypenoho9x.jpg",
+    src: "/assets/gallery/paneer_mexican_burrito_bowl.webp",
     alt: "Paneer Mexican Burrito Bowl",
   },
   {
     id: 12,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755675268/photo_library/k8llrdoy8mtnajlwvtlu.jpg",
+    src: "/assets/gallery/biscoff_lotus_cake.webp",
     alt: "Biscoff Lotus Cake",
   },
   {
     id: 13,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1754603593/photo_library/ptuqx105u3oi35dmekf1.jpg",
+    src: "/assets/gallery/manchurian_gravy.webp",
     alt: "Manchurian Gravy",
   },
   {
     id: 14,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1754039070/photo_library/iyldhcxtdwpmx3z4ahho.jpg",
+    src: "/assets/gallery/strawberry_milk_shake.webp",
     alt: "Strawberry Milk Shake",
   },
   {
     id: 15,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1754232813/photo_library/e2k72kkjmhvq6f2aulj3.jpg",
+    src: "/assets/gallery/dahi_vada.webp",
     alt: "Dahi Vada",
   },
   {
     id: 16,
-    src: "https://res.cloudinary.com/dz2uuz5xv/image/upload/v1755635829/photo_library/wc3ursf1sxbgivktm0se.jpg",
+    src: "/assets/gallery/soyabean_steam_momos.webp",
     alt: "Soyabean Steam Momos",
   },
 ];
@@ -97,10 +98,11 @@ function MasonryItem({ img, index }) {
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <img
+      <Image
         src={img.src}
         alt={img.alt}
-        loading="lazy"
+        width={400}
+        height={300}
         className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
       />
 

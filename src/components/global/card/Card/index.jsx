@@ -29,7 +29,7 @@ const Card = ({ image, index, slug }) => {
         <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300">
           <DownloadDropdown
             withWatermarkUrl={image.image_url}
-            withoutWatermarkUrl={`https://app.foodsnap.in?search=${slug}`}
+            withoutWatermarkUrl={`${process.env.NEXT_PUBLIC_USER_APP_URL || "https://app.foodsnap.in"}?search=${slug}`}
             title={image.title}
           />
         </div>
@@ -53,13 +53,13 @@ const Card = ({ image, index, slug }) => {
           creator: {
             "@type": "Organization",
             name: "Foodsnap",
-            url: "https://foodsnap.in",
+            url: process.env.NEXT_PUBLIC_BASE_URL || "https://foodsnap.in",
           },
           creditText:
             "Image courtesy of Foodsnap.in (curated from Zomato/Google sources)",
           copyrightNotice: "© Original rights holders / Curated by Foodsnap.in",
-          license: "https://foodsnap.in/license",
-          acquireLicensePage: "https://foodsnap.in/acquire-image-rights",
+          license: `${process.env.NEXT_PUBLIC_BASE_URL || "https://foodsnap.in"}/license`,
+          acquireLicensePage: `${process.env.NEXT_PUBLIC_BASE_URL || "https://foodsnap.in"}/acquire-image-rights`,
         })}
       </script>
     </motion.figure>

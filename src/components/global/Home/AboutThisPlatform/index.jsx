@@ -1,32 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const steps = [
   {
     title: "Sign Up & Login",
     desc: "Create your account and instantly access our curated dashboard.",
-    img: "/assets/setup4.png",
+    img: "/assets/setup/setup4.webp",
   },
   {
     title: "Browse Photo Library",
     desc: "Explore high-resolution, Zomato & Swiggy-approved food images.",
-    img: "/assets/setup6.png",
+    img: "/assets/setup/setup6.webp",
   },
   {
     title: "Filter by Cuisine or Dish",
     desc: "Find the perfect photos using tags, dish names, or categories.",
-    img: "/assets/setup.png",
+    img: "/assets/setup/setup.webp",
   },
   {
     title: "Download Instantly",
     desc: "Download unlimited approved images and use them right away.",
-    img: "/assets/setup.png",
+    img: "/assets/setup/setup.webp",
   },
   {
     title: "Get Menu Setup Help (Pro)",
     desc: "Let us transfer your Zomato menu to Swiggy or another outlet.",
-    img: "/assets/setup.png",
+    img: "/assets/setup/setup.webp",
   },
 ];
 
@@ -54,9 +55,11 @@ export default function AboutThisPlatform() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md shadow-lg flex flex-col items-start text-start"
             >
-              <img
+              <Image
                 src={step.img}
                 alt={step.title}
+                width={400}
+                height={250}
                 className="w-full object-cover rounded-xl mb-4 border border-white/10"
               />
 
