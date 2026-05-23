@@ -7,14 +7,14 @@ export function Video() {
         className="block dark:hidden"
         animationStyle="from-center"
         videoSrc="https://www.youtube.com/embed/wP5GhASVhJc"
-        thumbnailSrc="/thumbnail.webp"
+        thumbnailSrc="/thumbnail.png"
         thumbnailAlt="Hero Video"
       />
       <HeroVideoDialog
         className="hidden dark:block"
         animationStyle="from-center"
         videoSrc="https://www.youtube.com/embed/5WGkteSADJ0?si=Ye5ll-waKUN2NWDH"
-        thumbnailSrc="/thumbnail.webp"
+        thumbnailSrc="/thumbnail.png"
         thumbnailAlt="Hero Video"
       />
     </div>
